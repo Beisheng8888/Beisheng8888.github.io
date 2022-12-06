@@ -3,8 +3,8 @@
 *.log
 /_playwright-report
 /_playwright-results
-#/lib
-#/node_modules
+/lib
+/node_modules
 
 # exceptions
 !.gitkeep
