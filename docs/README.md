@@ -14,8 +14,8 @@
 	<a target="_blank" href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">
 		<img src="https://img.shields.io/badge/JDK-8+-green.svg" />
 	</a>
-	<a target="_blank" href='https://github.com/Beisheng8888/docsify'>
-		<img src="https://img.shields.io/github/stars/Beisheng8888/docsify.svg?style=social" alt="github star"/>
+	<a target="_blank" href='https://github.com/Beisheng8888/Beisheng8888.github.io'>
+		<img src="https://img.shields.io/github/stars/Beisheng8888/Beisheng8888.github.io.svg?style=social" alt="github star"/>
 	</a>
 </p>
 <br/>
@@ -105,7 +105,7 @@ Linux部署
 
 [//]: # (- [Gitee issue]&#40;https://gitee.com/dromara/hutool/issues&#41;)
 
-- [Github issue](https://github.com/Beisheng8888/docsify/issues)
+- [Github issue](https://github.com/Beisheng8888/Beisheng8888.github.io/issues)
 
 ### 🧬贡献代码的步骤
 
@@ -122,7 +122,7 @@ Linux部署
 
 ## ⭐Star
 
-[![Stargazers over time](https://starchart.cc/Beisheng8888/docsify.svg)](https://starchart.cc/Beisheng8888/docsify)
+[![Stargazers over time](https://starchart.cc/Beisheng8888/Beisheng8888.github.io.svg)](https://starchart.cc/Beisheng8888/Beisheng8888.github.io)
 
 ## 📌 联系我
 
