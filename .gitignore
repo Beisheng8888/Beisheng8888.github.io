@@ -5,7 +5,9 @@
 /_playwright-results
 /lib
 /node_modules
-/themes
+
+#/themes
+
 
 # exceptions
 !.gitkeep
