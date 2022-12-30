@@ -452,9 +452,7 @@
             <name>张三</name>
             <age>23</age>
         </person>
-
     </persons>
-    ​```
     ```
 
 ### 1.6schema约束【理解】
