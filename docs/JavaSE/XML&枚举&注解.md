@@ -318,30 +318,22 @@
 
   + 代码实现
 
-    ```java
+    ```xml
     <!ELEMENT persons (person)>
     <!ELEMENT person (name,age)>
     <!ELEMENT name (#PCDATA)>
     <!ELEMENT age (#PCDATA)>
     ```
-  ```
-
-  ```
 
 + 引入DTD约束
 
   + 引入DTD约束的三种方法
 
     + 引入本地dtd
-
       <!DOCTYPE 根元素名称 SYSTEM ‘DTD文件的路径'>
-
     + 在xml文件内部引入
-
       <!DOCTYPE 根元素名称 [ dtd文件内容 ]>
-
     + 引入网络dtd
-
       <!DOCTYPE 根元素的名称 PUBLIC "DTD文件名称" "DTD文档的URL">
 
   + 代码实现
