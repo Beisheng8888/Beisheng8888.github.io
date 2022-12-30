@@ -543,9 +543,7 @@
             <name>张三</name>
             <age>23</age>
         </person>
-
     </persons>
-    ​```
     ```
 
 + schema约束定义属性
@@ -596,7 +594,6 @@
         </person>
 
     </persons>
-    ​```
     ```
 
 ## 2.枚举
