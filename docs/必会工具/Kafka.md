@@ -546,7 +546,7 @@ public class HelloController {
 
     @GetMapping("/hello")
     public String hello(){
-        kafkaTemplate.send("itcast-topic","345");
+        kafkaTemplate.send("beisheng-topic","345");
         return "ok";
     }
 }
@@ -564,7 +564,7 @@ import org.springframework.util.StringUtils;
 @Component
 public class HelloListener {
 
-    @KafkaListener(topics = "itcast-topic")
+    @KafkaListener(topics = "beisheng-topic")
     public void onMessage(String message){
         if(!StringUtils.isEmpty(message)){
             System.out.println(message);

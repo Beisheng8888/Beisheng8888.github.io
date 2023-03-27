@@ -210,9 +210,9 @@ https://gitee.com/ChuanZhiBoKe/myGitRepo.git
 
 **设置用户信息**
 
-  git config --global user.name "itcast"
+  git config --global user.name "beisheng"
 
-  git config --global user.email "hello@itcast.cn"
+  git config --global user.email "hello@beisheng.cn"
 
 **查看配置信息**
 

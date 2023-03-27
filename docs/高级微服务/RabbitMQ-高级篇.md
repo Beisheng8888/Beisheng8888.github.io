@@ -103,7 +103,7 @@ spring:
 修改publisher服务，添加一个：
 
 ```java
-package cn.itcast.mq.config;
+package cn.beisheng.mq.config;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -136,7 +136,7 @@ public class CommonConfig implements ApplicationContextAware {
 
 ConfirmCallback可以在发送消息时指定，因为每个业务处理confirm成功或失败的逻辑不一定相同。
 
-在publisher服务的cn.itcast.mq.spring.SpringAmqpTest类中，定义一个单元测试方法：
+在publisher服务的cn.beisheng.mq.spring.SpringAmqpTest类中，定义一个单元测试方法：
 
 ```java
 public void testSendMessage2SimpleQueue() throws InterruptedException {
@@ -435,7 +435,7 @@ public MessageRecoverer republishMessageRecoverer(RabbitTemplate rabbitTemplate)
 完整代码：
 
 ```java
-package cn.itcast.mq.config;
+package cn.beisheng.mq.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -1027,7 +1027,7 @@ public Queue quorumQueue() {
 spring:
   rabbitmq:
     addresses: 192.168.150.105:8071, 192.168.150.105:8072, 192.168.150.105:8073
-    username: itcast
+    username: beisheng
     password: 123321
     virtual-host: /
 ```

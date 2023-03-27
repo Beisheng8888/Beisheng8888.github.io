@@ -98,10 +98,10 @@ spring:
 完整代码：
 
 ```java
-package cn.itcast.user.web;
+package cn.beisheng.user.web;
 
-import cn.itcast.user.pojo.User;
-import cn.itcast.user.service.UserService;
+import cn.beisheng.user.pojo.User;
+import cn.beisheng.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -162,7 +162,7 @@ public class UserController {
 在user-service服务中，添加一个类，读取patterrn.dateformat属性：
 
 ```java
-package cn.itcast.user.config;
+package cn.beisheng.user.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
@@ -187,11 +187,11 @@ public class PatternProperties {
 完整代码：
 
 ```java
-package cn.itcast.user.web;
+package cn.beisheng.user.web;
 
-import cn.itcast.user.config.PatternProperties;
-import cn.itcast.user.pojo.User;
-import cn.itcast.user.service.UserService;
+import cn.beisheng.user.config.PatternProperties;
+import cn.beisheng.user.pojo.User;
+import cn.beisheng.user.service.UserService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -366,9 +366,9 @@ Fegin的使用步骤如下：
 在order-service中新建一个接口，内容如下：
 
 ```java
-package cn.itcast.order.client;
+package cn.beisheng.order.client;
 
-import cn.itcast.order.pojo.User;
+import cn.beisheng.order.pojo.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -686,7 +686,7 @@ UserController：
 
 ```xml
 <dependency>
-    <groupId>cn.itcast.demo</groupId>
+    <groupId>cn.beisheng.demo</groupId>
     <artifactId>feign-api</artifactId>
     <version>1.0</version>
 </dependency>
@@ -706,9 +706,9 @@ UserController：
 
 
 
-这是因为UserClient现在在cn.itcast.feign.clients包下，
+这是因为UserClient现在在cn.beisheng.feign.clients包下，
 
-而order-service的@EnableFeignClients注解是在cn.itcast.order包下，不在同一个包，无法扫描到UserClient。
+而order-service的@EnableFeignClients注解是在cn.beisheng.order包下，不在同一个包，无法扫描到UserClient。
 
 
 
@@ -719,7 +719,7 @@ UserController：
 指定Feign应该扫描的包：
 
 ```java
-@EnableFeignClients(basePackages = "cn.itcast.feign.clients")
+@EnableFeignClients(basePackages = "cn.beisheng.feign.clients")
 ```
 
 
@@ -818,7 +818,7 @@ Zuul是基于Servlet的实现，属于阻塞式编程。而SpringCloudGateway则
 ### 2）编写启动类
 
 ```java
-package cn.itcast.gateway;
+package cn.beisheng.gateway;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -968,7 +968,7 @@ Spring提供了31种不同的路由过滤器工厂。例如：
 
 下面我们以AddRequestHeader 为例来讲解。
 
-> **需求**：给所有进入userservice的请求添加一个请求头：Truth=itcast is freaking awesome!
+> **需求**：给所有进入userservice的请求添加一个请求头：Truth=beisheng is freaking awesome!
 
 
 
@@ -984,7 +984,7 @@ spring:
         predicates:
         - Path=/user/**
         filters: # 过滤器
-        - AddRequestHeader=Truth, Itcast is freaking awesome! # 添加请求头
+        - AddRequestHeader=Truth, beisheng is freaking awesome! # 添加请求头
 ```
 
 当前过滤器写在userservice路由下，因此仅仅对访问userservice的请求有效。
@@ -1007,7 +1007,7 @@ spring:
         predicates:
         - Path=/user/**
       default-filters: # 默认过滤项
-      - AddRequestHeader=Truth, Itcast is freaking awesome!
+      - AddRequestHeader=Truth, beisheng is freaking awesome!
 ```
 
 
@@ -1078,7 +1078,7 @@ public interface GlobalFilter {
 在gateway中定义一个过滤器：
 
 ```java
-package cn.itcast.gateway.filters;
+package cn.beisheng.gateway.filters;
 
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;

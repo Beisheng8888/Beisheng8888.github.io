@@ -980,10 +980,10 @@ feign:
 代码：
 
 ```java
-package cn.itcast.feign.clients.fallback;
+package cn.beisheng.feign.clients.fallback;
 
-import cn.itcast.feign.clients.UserClient;
-import cn.itcast.feign.pojo.User;
+import cn.beisheng.feign.clients.UserClient;
+import cn.beisheng.feign.pojo.User;
 import feign.hystrix.FallbackFactory;
 import lombok.extern.slf4j.Slf4j;
 
@@ -1017,8 +1017,8 @@ public UserClientFallbackFactory userClientFallbackFactory(){
 **步骤三**：在feing-api项目中的UserClient接口中使用UserClientFallbackFactory：
 
 ```java
-import cn.itcast.feign.clients.fallback.UserClientFallbackFactory;
-import cn.itcast.feign.pojo.User;
+import cn.beisheng.feign.clients.fallback.UserClientFallbackFactory;
+import cn.beisheng.feign.pojo.User;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -1372,7 +1372,7 @@ public interface RequestOriginParser {
 例如order-service服务中，我们定义一个RequestOriginParser的实现类：
 
 ```java
-package cn.itcast.order.sentinel;
+package cn.beisheng.order.sentinel;
 
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.RequestOriginParser;
 import org.springframework.stereotype.Component;
@@ -1489,7 +1489,7 @@ public interface BlockExceptionHandler {
 下面，我们就在order-service定义一个自定义异常处理类：
 
 ```java
-package cn.itcast.order.sentinel;
+package cn.beisheng.order.sentinel;
 
 import com.alibaba.csp.sentinel.adapter.spring.webmvc.callback.BlockExceptionHandler;
 import com.alibaba.csp.sentinel.slots.block.BlockException;

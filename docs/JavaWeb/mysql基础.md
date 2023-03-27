@@ -777,15 +777,15 @@ select * from stu;
 -- 给指定列添加数据
 INSERT INTO stu (id, NAME) VALUES (1, '张三');
 -- 给所有列添加数据，列名的列表可以省略的
-INSERT INTO stu (id,NAME,sex,birthday,score,email,tel,STATUS) VALUES (2,'李四','男','1999-11-11',88.88,'lisi@itcast.cn','13888888888',1);
+INSERT INTO stu (id,NAME,sex,birthday,score,email,tel,STATUS) VALUES (2,'李四','男','1999-11-11',88.88,'lisi@beisheng.cn','13888888888',1);
 
-INSERT INTO stu VALUES (2,'李四','男','1999-11-11',88.88,'lisi@itcast.cn','13888888888',1);
+INSERT INTO stu VALUES (2,'李四','男','1999-11-11',88.88,'lisi@beisheng.cn','13888888888',1);
 
 -- 批量添加数据
 INSERT INTO stu VALUES
-	(2,'李四','男','1999-11-11',88.88,'lisi@itcast.cn','13888888888',1),
-	(2,'李四','男','1999-11-11',88.88,'lisi@itcast.cn','13888888888',1),
-	(2,'李四','男','1999-11-11',88.88,'lisi@itcast.cn','13888888888',1);
+	(2,'李四','男','1999-11-11',88.88,'lisi@beisheng.cn','13888888888',1),
+	(2,'李四','男','1999-11-11',88.88,'lisi@beisheng.cn','13888888888',1),
+	(2,'李四','男','1999-11-11',88.88,'lisi@beisheng.cn','13888888888',1);
 ```
 
 

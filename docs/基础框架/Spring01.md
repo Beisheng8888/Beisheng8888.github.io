@@ -801,7 +801,7 @@ setter方式注入使用什么子标签？
 ```xml
 <property name="list">
     <list>
-        <value>itcast</value>
+        <value>beisheng</value>
         <value>itheima</value>
         <value>boxuegu</value>
         <value>chuanzhihui</value>
@@ -814,7 +814,7 @@ setter方式注入使用什么子标签？
 ```xml
 <property name="set">
     <set>
-        <value>itcast</value>
+        <value>beisheng</value>
         <value>itheima</value>
         <value>boxuegu</value>
         <value>boxuegu</value>

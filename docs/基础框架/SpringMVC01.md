@@ -914,7 +914,7 @@ public String toText(){
 public User toJsonPOJO(){
     System.out.println("返回json对象数据");
     User user = new User();
-    user.setName("itcast");
+    user.setName("beisheng");
     user.setAge(15);
     return user;
 }

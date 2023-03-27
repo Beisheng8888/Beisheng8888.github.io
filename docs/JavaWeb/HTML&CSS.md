@@ -463,7 +463,7 @@ height属性和width属性有两种设置方式：
   <title>Title</title>
 </head>
 <body>
-<a href="https://www.itcast.cn" target="_self">点我有惊喜</a>
+<a href="https://www.beisheng.cn" target="_self">点我有惊喜</a>
 </body>
 </html>
 ```

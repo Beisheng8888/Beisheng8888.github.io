@@ -762,8 +762,8 @@ public void testCommon(){
     }
 
     //判断某个key是否存在
-    Boolean itcast = redisTemplate.hasKey("itcast");
-    System.out.println(itcast);
+    Boolean beisheng = redisTemplate.hasKey("beisheng");
+    System.out.println(beisheng);
 
     //删除指定key
     redisTemplate.delete("myZset");

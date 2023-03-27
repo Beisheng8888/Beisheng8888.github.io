@@ -257,7 +257,7 @@ cloud-order表中持有cloud-user表中的id字段。
 首先，我们在order-service服务中的OrderApplication启动类中，注册RestTemplate实例：
 
 ```java
-package cn.itcast.order;
+package cn.beisheng.order;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -265,7 +265,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@MapperScan("cn.itcast.order.mapper")
+@MapperScan("cn.beisheng.order.mapper")
 @SpringBootApplication
 public class OrderApplication {
 
@@ -284,7 +284,7 @@ public class OrderApplication {
 
 ### 2.3.3.实现远程调用
 
-修改order-service服务中的cn.itcast.order.service包下的OrderService类中的queryOrderById方法：
+修改order-service服务中的cn.beisheng.order.service包下的OrderService类中的queryOrderById方法：
 
 ![image-20210713213959569](assets/image-20210713213959569.png)
 
@@ -424,7 +424,7 @@ public class OrderApplication {
 给eureka-server服务编写一个启动类，一定要添加一个@EnableEurekaServer注解，开启eureka的注册中心功能：
 
 ```java
-package cn.itcast.eureka;
+package cn.beisheng.eureka;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -591,7 +591,7 @@ eureka:
 
 
 
-修改order-service服务中的cn.itcast.order.service包下的OrderService类中的queryOrderById方法。修改访问的url路径，用服务名代替ip、端口：
+修改order-service服务中的cn.beisheng.order.service包下的OrderService类中的queryOrderById方法。修改访问的url路径，用服务名代替ip、端口：
 
 ![image-20210713224245731](assets/image-20210713224245731.png)
 

@@ -209,7 +209,7 @@ RabbitMQ官方提供了5个不同的Demo示例，对应了不同的消息模型�
 代码实现：
 
 ```java
-package cn.itcast.mq.helloworld;
+package cn.beisheng.mq.helloworld;
 
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
@@ -228,7 +228,7 @@ public class PublisherTest {
         factory.setHost("192.168.150.101");
         factory.setPort(5672);
         factory.setVirtualHost("/");
-        factory.setUsername("itcast");
+        factory.setUsername("beisheng");
         factory.setPassword("123321");
         // 1.2.建立连接
         Connection connection = factory.newConnection();
@@ -273,7 +273,7 @@ public class PublisherTest {
 代码实现：
 
 ```java
-package cn.itcast.mq.helloworld;
+package cn.beisheng.mq.helloworld;
 
 import com.rabbitmq.client.*;
 
@@ -289,7 +289,7 @@ public class ConsumerTest {
         factory.setHost("192.168.150.101");
         factory.setPort(5672);
         factory.setVirtualHost("/");
-        factory.setUsername("itcast");
+        factory.setUsername("beisheng");
         factory.setPassword("123321");
         // 1.2.建立连接
         Connection connection = factory.newConnection();
@@ -403,7 +403,7 @@ spring:
 然后在publisher服务中编写测试类SpringAmqpTest，并利用RabbitTemplate实现消息发送：
 
 ```java
-package cn.itcast.mq.spring;
+package cn.beisheng.mq.spring;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -451,10 +451,10 @@ spring:
 
 
 
-然后在consumer服务的`cn.itcast.mq.listener`包中新建一个类SpringRabbitListener，代码如下：
+然后在consumer服务的`cn.beisheng.mq.listener`包中新建一个类SpringRabbitListener，代码如下：
 
 ```java
-package cn.itcast.mq.listener;
+package cn.beisheng.mq.listener;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Component;
@@ -625,8 +625,8 @@ Fanout，英文翻译是扇出，我觉得在MQ中叫广播更合适。
 
 我们的计划是这样的：
 
-- 创建一个交换机 itcast.fanout，类型是Fanout
-- 创建两个队列fanout.queue1和fanout.queue2，绑定到交换机itcast.fanout
+- 创建一个交换机 beisheng.fanout，类型是Fanout
+- 创建两个队列fanout.queue1和fanout.queue2，绑定到交换机beisheng.fanout
 
 ![image-20210717165509466](assets/image-20210717165509466.png)
 
@@ -645,7 +645,7 @@ Spring提供了一个接口Exchange，来表示所有不同类型的交换机：
 在consumer中创建一个类，声明队列和交换机：
 
 ```java
-package cn.itcast.mq.config;
+package cn.beisheng.mq.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -662,7 +662,7 @@ public class FanoutConfig {
      */
     @Bean
     public FanoutExchange fanoutExchange(){
-        return new FanoutExchange("itcast.fanout");
+        return new FanoutExchange("beisheng.fanout");
     }
 
     /**
@@ -709,7 +709,7 @@ public class FanoutConfig {
 @Test
 public void testFanoutExchange() {
     // 队列名称
-    String exchangeName = "itcast.fanout";
+    String exchangeName = "beisheng.fanout";
     // 消息
     String message = "hello, everyone!";
     rabbitTemplate.convertAndSend(exchangeName, "", message);
@@ -777,7 +777,7 @@ public void listenFanoutQueue2(String msg) {
 
 2. 在consumer服务中，编写两个消费者方法，分别监听direct.queue1和direct.queue2
 
-3. 在publisher中编写测试方法，向itcast. direct发送消息
+3. 在publisher中编写测试方法，向beisheng. direct发送消息
 
 ![image-20210717170223317](assets/image-20210717170223317.png)
 
@@ -794,7 +794,7 @@ public void listenFanoutQueue2(String msg) {
 ```java
 @RabbitListener(bindings = @QueueBinding(
     value = @Queue(name = "direct.queue1"),
-    exchange = @Exchange(name = "itcast.direct", type = ExchangeTypes.DIRECT),
+    exchange = @Exchange(name = "beisheng.direct", type = ExchangeTypes.DIRECT),
     key = {"red", "blue"}
 ))
 public void listenDirectQueue1(String msg){
@@ -803,7 +803,7 @@ public void listenDirectQueue1(String msg){
 
 @RabbitListener(bindings = @QueueBinding(
     value = @Queue(name = "direct.queue2"),
-    exchange = @Exchange(name = "itcast.direct", type = ExchangeTypes.DIRECT),
+    exchange = @Exchange(name = "beisheng.direct", type = ExchangeTypes.DIRECT),
     key = {"red", "yellow"}
 ))
 public void listenDirectQueue2(String msg){
@@ -821,7 +821,7 @@ public void listenDirectQueue2(String msg){
 @Test
 public void testSendDirectExchange() {
     // 交换机名称
-    String exchangeName = "itcast.direct";
+    String exchangeName = "beisheng.direct";
     // 消息
     String message = "红色警报！日本乱排核废水，导致海洋生物变异，惊现哥斯拉！";
     // 发送消息
@@ -897,7 +897,7 @@ public void testSendDirectExchange() {
 
 2. 在consumer服务中，编写两个消费者方法，分别监听topic.queue1和topic.queue2
 
-3. 在publisher中编写测试方法，向itcast. topic发送消息
+3. 在publisher中编写测试方法，向beisheng. topic发送消息
 
 
 
@@ -918,7 +918,7 @@ public void testSendDirectExchange() {
 @Test
 public void testSendTopicExchange() {
     // 交换机名称
-    String exchangeName = "itcast.topic";
+    String exchangeName = "beisheng.topic";
     // 消息
     String message = "喜报！孙悟空大战哥斯拉，胜!";
     // 发送消息
@@ -935,7 +935,7 @@ public void testSendTopicExchange() {
 ```java
 @RabbitListener(bindings = @QueueBinding(
     value = @Queue(name = "topic.queue1"),
-    exchange = @Exchange(name = "itcast.topic", type = ExchangeTypes.TOPIC),
+    exchange = @Exchange(name = "beisheng.topic", type = ExchangeTypes.TOPIC),
     key = "china.#"
 ))
 public void listenTopicQueue1(String msg){
@@ -944,7 +944,7 @@ public void listenTopicQueue1(String msg){
 
 @RabbitListener(bindings = @QueueBinding(
     value = @Queue(name = "topic.queue2"),
-    exchange = @Exchange(name = "itcast.topic", type = ExchangeTypes.TOPIC),
+    exchange = @Exchange(name = "beisheng.topic", type = ExchangeTypes.TOPIC),
     key = "#.news"
 ))
 public void listenTopicQueue2(String msg){
