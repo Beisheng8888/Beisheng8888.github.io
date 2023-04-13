@@ -1,7 +1,7 @@
 ## 🎁readme
 
 <p align="center">
-	<a href="https://hutool.cn/">
+	<a href="https://github.com/Beisheng8888">
 <img src="./assets/头像.jpg" width="20%"></a>
 </p>
 <p align="center">
@@ -105,8 +105,6 @@ Linux部署
 ### 🐞提供bug反馈或建议
 
 提交问题反馈请说明正在使用的JDK版本呢、文档版本和相关依赖库版本。
-
-[//]: # (- [Gitee issue]&#40;https://gitee.com/dromara/hutool/issues&#41;)
 
 - [Github issue](https://github.com/Beisheng8888/Beisheng8888.github.io/issues)
 
