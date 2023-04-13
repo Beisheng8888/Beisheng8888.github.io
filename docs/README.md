@@ -4,11 +4,13 @@
 	<a href="https://hutool.cn/"><img src="http://www.anqi520.com/upload/2022/12/beishengtouxiang-6b4a369e86184cb190bc7d46aca0633f.jpg" width="20%"></a>
 </p>
 <p align="center">
-	<strong>🍬甜品级Java开发文档.</strong>
+	<strong>🍬甜品级Java开发文档</strong>
 </p>
 <p align="center">
-	👉 <a href="http://anqi520.com:3000">http://anqi520.com:3000</a> 👈
+	👉 <a href="https://beisheng8888.github.io/#/">https://beisheng8888.github.io/#/</a> 👈
+永久可用
 </p>
+
 
 <p align="center">
 	<a target="_blank" href="https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads.html">

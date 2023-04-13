@@ -40,7 +40,6 @@
 
 
 
-[博客](http://anqi520.com)
 [GitHub](https://github.com/Beisheng8888/Beisheng8888.github.io)
 [开始](#🎁readme)
 
