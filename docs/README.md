@@ -1,7 +1,8 @@
 ## 🎁readme
 
 <p align="center">
-	<a href="https://hutool.cn/"><img src="http://www.anqi520.com/upload/2022/12/beishengtouxiang-6b4a369e86184cb190bc7d46aca0633f.jpg" width="20%"></a>
+	<a href="https://hutool.cn/">
+<img src="./assets/头像.jpg" width="20%"></a>
 </p>
 <p align="center">
 	<strong>🍬甜品级Java开发文档</strong>
@@ -83,8 +84,8 @@ Linux部署
 如果你觉得文档不错，可以捐赠请维护者吃包辣条~，在此表示感谢^_^。
 
 <div align="center">
-<img src="http://www.anqi520.com/upload/2022/12/weiPlay-e8a94018c94e458c8c13a59a606d6997.jpg" height="300">
-<img src="http://www.anqi520.com/upload/2022/12/ZFBPlay-ff899b238bda4b508adbb1c3d4af4724.jpg" height="300">
+<img src="./assets/微信收款二维码.jpg" height="300">
+<img src="./assets/支付宝二维码.jpg" height="300">
 </div>
 
 
@@ -129,7 +130,7 @@ Linux部署
 ## 📌 联系我
 
 <div align="center">
-<img src="http://www.anqi520.com/upload/2022/12/wecat-a2ea8a9a4f804d63807bd94afe8b85ba.jpg" height="350">
+<img src="./assets/微信二维码.jpg" height="350"></a>
 </div>
 
 ## 🌈 主题选择
