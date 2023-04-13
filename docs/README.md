@@ -84,8 +84,8 @@ Linux部署
 如果你觉得文档不错，可以捐赠请维护者吃包辣条~，在此表示感谢^_^。
 
 <div align="center">
-<img src="./assets/微信收款二维码.jpg" height="300">
-<img src="./assets/支付宝二维码.jpg" height="300">
+<img src="./assets/微信收款二维码.jpg" height="200">
+<img src="./assets/支付宝二维码.jpg" height="200">
 </div>
 
 
@@ -128,7 +128,7 @@ Linux部署
 ## 📌 联系我
 
 <div align="center">
-<img src="./assets/微信二维码.jpg" height="350"></a>
+<img src="./assets/微信二维码.jpg" height="200"></a>
 </div>
 
 ## 🌈 主题选择
