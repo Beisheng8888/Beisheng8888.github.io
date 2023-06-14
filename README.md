@@ -122,5 +122,7 @@ Linux部署
 
 ## ⭐Star
 
+ <a href="https://github.com/Beisheng8888/Beisheng8888.github.io/stargazers">
+        <img width="500" alt="Star History Chart" src="https://api.star-history.com/svg?repos=Beisheng8888/Beisheng8888.github.io&type=Date">
 
 </div>
