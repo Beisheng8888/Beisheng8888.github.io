@@ -122,11 +122,5 @@ Linux部署
 
 ## ⭐Star
 
-[![Stargazers over time](https://starchart.cc/Beisheng8888/Beisheng8888.github.io.svg)](https://starchart.cc/Beisheng8888/Beisheng8888.github.io)
-
-## 📌 联系我
-
-<div align="center">
-<img src="./docs/assets/微信二维码.jpg" height="350"></a>
 
 </div>
