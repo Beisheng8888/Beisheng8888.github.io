@@ -190,14 +190,14 @@ public class MyBatisConfig {
     public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource){
         SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
         factoryBean.setDataSource(dataSource);
-        factoryBean.setTypeAliasesPackage("com.itheima.domain");
+        factoryBean.setTypeAliasesPackage("com.beisheng.domain");
         return factoryBean;
     }
 
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer(){
         MapperScannerConfigurer msc = new MapperScannerConfigurer();
-        msc.setBasePackage("com.itheima.dao");
+        msc.setBasePackage("com.beisheng.dao");
         return msc;
     }
 }
@@ -207,7 +207,7 @@ public class MyBatisConfig {
 
 ```java
 @Configuration
-@ComponentScan({"com.itheima.service"})
+@ComponentScan({"com.beisheng.service"})
 @PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class,MyBatisConfig.class})
 @EnableTransactionManagement //开启Spring事务管理
@@ -221,7 +221,7 @@ public class SpringConfig {
 
 ```java
 @Configuration
-@ComponentScan("com.itheima.controller")
+@ComponentScan("com.beisheng.controller")
 @EnableWebMvc
 public class SpringMvcConfig {
 }
@@ -1018,7 +1018,7 @@ public class SpringMvcSupport extends WebMvcConfigurationSupport {
 
 ```java
 @Configuration
-@ComponentScan({"com.itheima.controller"})
+@ComponentScan({"com.beisheng.controller"})
 @EnableWebMvc
 //实现WebMvcConfigurer接口可以简化开发，但具有一定的侵入性
 public class SpringMvcConfig implements WebMvcConfigurer {
@@ -1126,7 +1126,7 @@ public class ProjectInterceptor2 implements HandlerInterceptor {
 
 ```java
 @Configuration
-@ComponentScan({"com.itheima.controller"})
+@ComponentScan({"com.beisheng.controller"})
 @EnableWebMvc
 //实现WebMvcConfigurer接口可以简化开发，但具有一定的侵入性
 public class SpringMvcConfig implements WebMvcConfigurer {

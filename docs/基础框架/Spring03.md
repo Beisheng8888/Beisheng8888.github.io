@@ -27,7 +27,7 @@
 - 连接点（JoinPoint）：正在执行的方法，例如：update()、delete()、select()等都是连接点。
 - 切入点（Pointcut）：进行功能增强了的方法，例如:update()、delete()方法，select()方法没有被增强所以不是切入点，但是是连接点。
   - 在SpringAOP中，一个切入点可以只描述一个具体方法，也可以匹配多个方法
-    - 一个具体方法：com.itheima.dao包下的BookDao接口中的无形参无返回值的save方法
+    - 一个具体方法：com.beisheng.dao包下的BookDao接口中的无形参无返回值的save方法
     - 匹配多个方法：所有的save方法，所有的get开头的方法，所有以Dao结尾的接口中的任意方法，所有带有一个参数的方法
 - 通知（Advice）：在切入点前后执行的操作，也就是增强的共性功能
   - 在SpringAOP中，功能最终以方法的形式呈现
@@ -123,7 +123,7 @@ public class MyAdvice {
 @Aspect
 public class MyAdvice {
     //设置切入点，@Pointcut注解要求配置在方法上方
-    @Pointcut("execution(void com.itheima.dao.BookDao.update())")
+    @Pointcut("execution(void com.beisheng.dao.BookDao.update())")
     private void pt(){}
 
     //设置在切入点pt()的前面运行当前操作(前置通知)
@@ -140,7 +140,7 @@ public class MyAdvice {
 
 ```java
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan("com.beisheng")
 //开启注解开发AOP功能
 @EnableAspectJAutoProxy
 public class SpringConfig {
@@ -215,22 +215,22 @@ public class App {
 
 - 切入点表达式：要进行增强的方法的描述方式
 
-  - 描述方式一：执行com.itheima.dao包下的BookDao接口中的无参数update方法
+  - 描述方式一：执行com.beisheng.dao包下的BookDao接口中的无参数update方法
 
   ```java
-  execution(void com.itheima.dao.BookDao.update())
+  execution(void com.beisheng.dao.BookDao.update())
   ```
 
-  - 描述方式二：执行com.itheima.dao.impl包下的BookDaoImpl类中的无参数update方法
+  - 描述方式二：执行com.beisheng.dao.impl包下的BookDaoImpl类中的无参数update方法
 
   ```java
-  execution(void com.itheima.dao.impl.BookDaoImpl.update())
+  execution(void com.beisheng.dao.impl.BookDaoImpl.update())
   ```
 
 - 切入点表达式标准格式：动作关键字(访问修饰符  返回值  包名.类/接口名.方法名(参数) 异常名）
 
   ```
-  execution(public User com.itheima.service.UserService.findById(int))
+  execution(public User com.beisheng.service.UserService.findById(int))
   ```
 
   - 动作关键字：描述切入点的行为动作，例如execution表示执行到指定切入点
@@ -248,10 +248,10 @@ public class App {
 
 * ：单个独立的任意符号，可以独立出现，也可以作为前缀或者后缀的匹配符出现
 
-> 匹配com.itheima包下的任意包中的UserService类或接口中所有find开头的带有一个参数的方法
+> 匹配com.beisheng包下的任意包中的UserService类或接口中所有find开头的带有一个参数的方法
 
 ```java
-execution（public * com.itheima.*.UserService.find*(*))
+execution（public * com.beisheng.*.UserService.find*(*))
 ```
 
 - .. ：多个连续的任意符号，可以独立出现，常用于简化包名与参数的书写
@@ -421,7 +421,7 @@ public Object around(ProceedingJoinPoint pjp) throws Throwable {
 @Aspect
 public class ProjectAdvice {
     //匹配业务层的所有方法
-    @Pointcut("execution(* com.itheima.service.*Service.*(..))")
+    @Pointcut("execution(* com.beisheng.service.*Service.*(..))")
     private void servicePt(){}
 
     //设置环绕通知，在原始操作的运行前后记录执行时间
@@ -451,7 +451,7 @@ public class ProjectAdvice {
 
 ```java
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan("com.beisheng")
 @PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class,MybatisConfig.class})
 @EnableAspectJAutoProxy //开启AOP注解功能
@@ -624,7 +624,7 @@ public class ResourcesDaoImpl implements ResourcesDao {
 @Aspect
 public class DataAdvice {
 
-    @Pointcut("execution(boolean com.itheima.service.*Service.*(*,*))")
+    @Pointcut("execution(boolean com.beisheng.service.*Service.*(*,*))")
     private void servicePt(){}
 
     @Around("DataAdvice.servicePt()")
@@ -646,7 +646,7 @@ public class DataAdvice {
 
 ```java
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan("com.beisheng")
 @EnableAspectJAutoProxy
 public class SpringConfig {
 }
@@ -682,7 +682,7 @@ public class App {
 #### 4.2 切入点表达式语法
 
 - 切入点表达式标准格式：动作关键字(访问修饰符  返回值  包名.类/接口名.方法名（参数）异常名)
-  - execution(* com.itheima.service.*Service.*(..))
+  - execution(* com.beisheng.service.*Service.*(..))
 - 切入点表达式描述通配符：
   - 作用：用于快速描述，范围描述
   - *：匹配任意符号（常用）
@@ -817,7 +817,7 @@ public PlatformTransactionManager transactionManager(DataSource dataSource){
 
 ```java
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan("com.beisheng")
 @PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class,MybatisConfig.class})
 //开启注解式事务驱动

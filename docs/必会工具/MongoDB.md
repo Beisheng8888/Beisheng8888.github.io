@@ -9,7 +9,7 @@ docker pull mongo
 ```
 docker run -di --name mongo-service --restart=always -p 27017:27017 -v ~/data/mongodata:/data mongo
 ```
-## 1.1.2)导入资料中的mongo-demo项目到heima-leadnews-test中
+## 1.1.2)导入资料中的mongo-demo项目到beisheng-leadnews-test中
 
 其中有三项配置比较关键：
 第一：mongo依赖
@@ -34,7 +34,7 @@ spring:
 
 第三：映射
 ```java
-package com.itheima.mongo.pojo;
+package com.beisheng.mongo.pojo;
 
 import lombok.Data;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -47,7 +47,7 @@ import java.util.Date;
  * 联想词表
  * </p>
  *
- * @author itheima
+ * @author beisheng
  */
 @Data
 @Document("ap_associate_words")
@@ -72,11 +72,11 @@ public class ApAssociateWords implements Serializable {
 
 ### 1.1.3)核心方法
 ```java
-package com.itheima.mongo.test;
+package com.beisheng.mongo.test;
 
 
-import com.itheima.mongo.MongoApplication;
-import com.itheima.mongo.pojo.ApAssociateWords;
+import com.beisheng.mongo.MongoApplication;
+import com.beisheng.mongo.pojo.ApAssociateWords;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

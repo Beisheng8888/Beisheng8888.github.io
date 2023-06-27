@@ -490,7 +490,7 @@
     <?xml version="1.0" encoding="UTF-8" ?>
     <schema
         xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://www.itheima.cn/javase"
+        targetNamespace="http://www.beisheng.cn/javase"
         elementFormDefault="qualified"
     >
 
@@ -536,8 +536,8 @@
 
     <persons
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns="http://www.itheima.cn/javase"
-        xsi:schemaLocation="http://www.itheima.cn/javase person.xsd"
+        xmlns="http://www.beisheng.cn/javase"
+        xsi:schemaLocation="http://www.beisheng.cn/javase person.xsd"
     >
         <person>
             <name>张三</name>
@@ -554,7 +554,7 @@
     <?xml version="1.0" encoding="UTF-8" ?>
     <schema
         xmlns="http://www.w3.org/2001/XMLSchema"
-        targetNamespace="http://www.itheima.cn/javase"
+        targetNamespace="http://www.beisheng.cn/javase"
         elementFormDefault="qualified"
     >
 
@@ -585,8 +585,8 @@
     <?xml version="1.0" encoding="UTF-8" ?>
     <persons
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns="http://www.itheima.cn/javase"
-        xsi:schemaLocation="http://www.itheima.cn/javase person.xsd"
+        xmlns="http://www.beisheng.cn/javase"
+        xsi:schemaLocation="http://www.beisheng.cn/javase person.xsd"
     >
         <person id="001">
             <name>张三</name>
@@ -838,7 +838,7 @@
       int a () default 23;
 
       //定义一个String类型的属性
-      public String name() default "itheima";
+      public String name() default "beisheng";
 
       //定义一个Class类型的属性
       public Class clazz() default Anno2.class;
@@ -864,7 +864,7 @@
 
   //在使用注解的时候如果注解里面的属性没有指定默认值。
   //那么我们就需要手动给出注解属性的设置值。
-  //@Anno1(name = "itheima")
+  //@Anno1(name = "beisheng")
   @Anno1("abc")
   public class AnnoDemo {
   }
@@ -918,7 +918,7 @@
     public class AnnoDemo {
         public static void main(String[] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, InvocationTargetException {
             //1.通过反射获取UseTest类的字节码文件对象
-            Class clazz = Class.forName("com.itheima.myanno3.UseTest");
+            Class clazz = Class.forName("com.beisheng.myanno3.UseTest");
 
             //创建对象
             UseTest useTest = (UseTest) clazz.newInstance();
@@ -978,7 +978,7 @@
   public class StudentDemo {
       public static void main(String[] args) throws ClassNotFoundException {
           //获取到Student类的字节码文件对象
-          Class clazz = Class.forName("com.itheima.myanno4.Student");
+          Class clazz = Class.forName("com.beisheng.myanno4.Student");
 
           //获取注解。
           boolean result = clazz.isAnnotationPresent(Anno.class);

@@ -57,7 +57,7 @@ public class BookController {
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.5.0</version>
     </parent>
-    <groupId>com.itheima</groupId>
+    <groupId>com.beisheng</groupId>
     <artifactId>springboot-01-quickstart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <dependencies>
@@ -152,7 +152,7 @@ java -jar springboot_01_quickstart.jar	# 项目的名称根据实际情况修改
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.5.0</version>
     </parent>
-    <groupId>com.itheima</groupId>
+    <groupId>com.beisheng</groupId>
     <artifactId>springboot-01-quickstart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <dependencies>
@@ -548,7 +548,7 @@ SpringBoot的配置文件可以放在项目的哪些地方？
 ![image-20210811200723514](assets/image-20210811200723514.png)
 
 ```properties
-java –jar springboot.jar --spring.profiles.active=test --server.port=85 --server.servlet.context-path=/heima --server.tomcat.connection-timeout=-1 ... ...
+java –jar springboot.jar --spring.profiles.active=test --server.port=85 --server.servlet.context-path=/beisheng --server.tomcat.connection-timeout=-1 ... ...
 ```
 
 - SpringBoot中4级配置文件
@@ -622,7 +622,7 @@ class Springboot07JunitApplicationTests {
 
 ```java
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan("com.beisheng")
 @PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class, MyBatisConfig.class})
 public class SpringConfig {
@@ -638,7 +638,7 @@ public class SpringConfig {
 jdbc.driver=com.mysql.jdbc.Driver
 jdbc.url=jdbc:mysql://localhost:3306/spring_db
 jdbc.username=root
-jdbc.password=itheima
+jdbc.password=beisheng
 ```
 
 ```java
@@ -673,7 +673,7 @@ public class JdbcConfig {
 @Bean
 public SqlSessionFactoryBean getSqlSessionFactoryBean(DataSource dataSource) {
     SqlSessionFactoryBean ssfb = new SqlSessionFactoryBean();
-    ssfb.setTypeAliasesPackage("com.itheima.domain");
+    ssfb.setTypeAliasesPackage("com.beisheng.domain");
     ssfb.setDataSource(dataSource);
     return ssfb;
 }
@@ -683,7 +683,7 @@ public SqlSessionFactoryBean getSqlSessionFactoryBean(DataSource dataSource) {
 @Bean
 public MapperScannerConfigurer getMapperScannerConfigurer() {
     MapperScannerConfigurer msc = new MapperScannerConfigurer();
-    msc.setBasePackage("com.itheima.dao");
+    msc.setBasePackage("com.beisheng.dao");
     return msc;
 }
 ```

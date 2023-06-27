@@ -345,7 +345,7 @@ maven坐标：
 示例代码：
 
 ~~~java
-package com.itheima.test;
+package com.beisheng.test;
 
 import org.junit.Test;
 import redis.clients.jedis.Jedis;
@@ -439,7 +439,7 @@ Spring Data Redis中提供了一个高度封装的类：**RedisTemplate**，针�
         <version>2.4.5</version>
         <relativePath/>
     </parent>
-    <groupId>com.itheima</groupId>
+    <groupId>com.beisheng</groupId>
     <artifactId>springdataredis_demo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <properties>
@@ -475,7 +475,7 @@ Spring Data Redis中提供了一个高度封装的类：**RedisTemplate**，针�
 第二步：编写启动类
 
 ~~~java
-package com.itheima;
+package com.beisheng;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -520,7 +520,7 @@ spring:
 第四步：提供配置类
 
 ~~~java
-package com.itheima.config;
+package com.beisheng.config;
 
 import org.springframework.cache.annotation.CachingConfigurerSupport;
 import org.springframework.context.annotation.Bean;
@@ -559,7 +559,7 @@ public class RedisConfig extends CachingConfigurerSupport {
 第五步：提供测试类
 
 ~~~java
-package com.itheima.test;
+package com.beisheng.test;
 
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

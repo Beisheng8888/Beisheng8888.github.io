@@ -89,7 +89,7 @@ A依赖B，B依赖C，如果A不想将C依赖进来，是否可以做到？
 
 ```xml
 <dependency>
-    <groupId>com.itheima</groupId>
+    <groupId>com.beisheng</groupId>
     <artifactId>maven_03_pojo</artifactId>
     <version>1.0-SNAPSHOT</version>
     <!--可选依赖是隐藏当前工程所依赖的资源，隐藏后对应资源将不具有依赖传递性-->
@@ -110,7 +110,7 @@ A依赖B，B依赖C，如果A不想将C依赖进来，是否可以做到？
 
 ```xml
 <dependency>
-    <groupId>com.itheima</groupId>
+    <groupId>com.beisheng</groupId>
     <artifactId>maven_04_dao</artifactId>
     <version>1.0-SNAPSHOT</version>
     <!--排除依赖是隐藏当前资源对应的依赖关系-->
@@ -237,7 +237,7 @@ A依赖B，B依赖C，如果A不想将C依赖进来，是否可以做到？
 ```xml
 <!--定义该工程的父工程-->
 <parent>
-    <groupId>com.itheima</groupId>
+    <groupId>com.beisheng</groupId>
     <artifactId>maven_parent</artifactId>
     <version>1.0-SNAPSHOT</version>
     <!--填写父工程的pom文件，根据实际情况填写-->
@@ -548,7 +548,7 @@ mvn install –P pro_env
 
 ```xml
 <mirror>
-    <id>nexus-heima</id>
+    <id>nexus-beisheng</id>
     <mirrorOf>*</mirrorOf>
     <url>http://localhost:8081/repository/maven-public/</url>
 </mirror>
@@ -569,7 +569,7 @@ mvn install –P pro_env
 ```xml
 <server>
   <!--id任意，多个server的id不重复就行，后面会用到-->
-  <id>heima-nexus</id>
+  <id>beisheng-nexus</id>
   <username>admin</username>
   <password>123456</password><!--填写自己nexus设定的登录秘密-->
 </server>
@@ -581,20 +581,20 @@ mvn install –P pro_env
 <distributionManagement>
     <repository>
       	<!--和maven/settings.xml中server中的id一致，表示使用该id对应的用户名和密码-->
-        <id>heima-nexus</id>
+        <id>beisheng-nexus</id>
       	<!--如果jar的版本是release版本，那么就上传到这个仓库，根据自己情况修改-->
-        <url>http://localhost:8081/repository/heima-releases/</url>
+        <url>http://localhost:8081/repository/beisheng-releases/</url>
     </repository>
     <snapshotRepository>
       	<!--和maven/settings.xml中server中的id一致，表示使用该id对应的用户名和密码-->
-        <id>heima-nexus</id>
+        <id>beisheng-nexus</id>
       	<!--如果jar的版本是snapshot版本，那么就上传到这个仓库，根据自己情况修改-->
-        <url>http://localhost:8081/repository/heima-snapshots/</url>
+        <url>http://localhost:8081/repository/beisheng-snapshots/</url>
     </snapshotRepository>
 </distributionManagement>
 ```
 
-**==注意：要和maven的settings.xml中server中定义的\<id>heima-nexus\</id>对应==**
+**==注意：要和maven的settings.xml中server中定义的\<id>beisheng-nexus\</id>对应==**
 
 【第三步】发布资源到私服命令
 

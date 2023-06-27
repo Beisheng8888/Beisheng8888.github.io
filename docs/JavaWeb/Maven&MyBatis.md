@@ -296,7 +296,7 @@ Maven 对项目构建的生命周期划分为3套：
 
 **Maven 坐标主要组成**
 
-* groupId：定义当前Maven项目隶属组织名称（通常是域名反写，例如：com.itheima）
+* groupId：定义当前Maven项目隶属组织名称（通常是域名反写，例如：com.beisheng）
 * artifactId：定义当前Maven项目名称（通常是模块名称，例如 order-service、goods-service）
 * version：定义当前项目版本号
 
@@ -610,7 +610,7 @@ Maven 对项目构建的生命周期划分为3套：
   <configuration>
 
       <typeAliases>
-          <package name="com.itheima.pojo"/>
+          <package name="com.beisheng.pojo"/>
       </typeAliases>
 
       <!--
@@ -654,7 +654,7 @@ Maven 对项目构建的生命周期划分为3套：
   <?xml version="1.0" encoding="UTF-8" ?>
   <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
   <mapper namespace="test">
-      <select id="selectAll" resultType="com.itheima.pojo.User">
+      <select id="selectAll" resultType="com.beisheng.pojo.User">
           select * from tb_user;
       </select>
   </mapper>
@@ -662,7 +662,7 @@ Maven 对项目构建的生命周期划分为3套：
 
 * 编码
 
-  * 在 `com.itheima.pojo` 包下创建 User类
+  * 在 `com.beisheng.pojo` 包下创建 User类
 
     ```java
     public class User {
@@ -676,7 +676,7 @@ Maven 对项目构建的生命周期划分为3套：
     }
     ```
 
-  * 在 `com.itheima` 包下编写 MybatisDemo 测试类
+  * 在 `com.beisheng` 包下编写 MybatisDemo 测试类
 
     ```java
     public class MyBatisDemo {
@@ -765,7 +765,7 @@ Mybatis 官网也是推荐使用 Mapper 代理的方式。下图是截止官网�
 
 #### 2.3.3  案例代码实现
 
-* 在 `com.itheima.mapper` 包下创建 UserMapper接口，代码如下：
+* 在 `com.beisheng.mapper` 包下创建 UserMapper接口，代码如下：
 
   ```java
   public interface UserMapper {
@@ -774,21 +774,21 @@ Mybatis 官网也是推荐使用 Mapper 代理的方式。下图是截止官网�
   }
   ```
 
-* 在 `resources` 下创建 `com/itheima/mapper` 目录，并在该目录下创建 UserMapper.xml 映射配置文件
+* 在 `resources` 下创建 `com/beisheng/mapper` 目录，并在该目录下创建 UserMapper.xml 映射配置文件
 
   ```xml
   <!--
       namespace:名称空间。必须是对应接口的全限定名
   -->
-  <mapper namespace="com.itheima.mapper.UserMapper">
-      <select id="selectAll" resultType="com.itheima.pojo.User">
+  <mapper namespace="com.beisheng.mapper.UserMapper">
+      <select id="selectAll" resultType="com.beisheng.pojo.User">
           select *
           from tb_user;
       </select>
   </mapper>
   ```
 
-* 在 `com.itheima` 包下创建 MybatisDemo2 测试类，代码如下：
+* 在 `com.beisheng` 包下创建 MybatisDemo2 测试类，代码如下：
 
   ```java
   /**
@@ -825,9 +825,9 @@ Mybatis 官网也是推荐使用 Mapper 代理的方式。下图是截止官网�
 
 <mappers>
   <!--加载sql映射文件-->
-  <!-- <mapper resource="com/itheima/mapper/UserMapper.xml"/>-->
+  <!-- <mapper resource="com/beisheng/mapper/UserMapper.xml"/>-->
   <!--Mapper代理方式-->
-  <package name="com.itheima.mapper"/>
+  <package name="com.beisheng.mapper"/>
 </mappers>
 ```
 
@@ -882,7 +882,7 @@ Mybatis 官网也是推荐使用 Mapper 代理的方式。下图是截止官网�
 
 <typeAliases>
   <!--name属性的值是实体类所在包-->
-  <package name="com.itheima.pojo"/>
+  <package name="com.beisheng.pojo"/>
 </typeAliases>
 ```
 
@@ -890,7 +890,7 @@ Mybatis 官网也是推荐使用 Mapper 代理的方式。下图是截止官网�
 
 ```xml
 
-<mapper namespace="com.itheima.mapper.UserMapper">
+<mapper namespace="com.beisheng.mapper.UserMapper">
   <select id="selectAll" resultType="user">
     select * from tb_user;
   </select>

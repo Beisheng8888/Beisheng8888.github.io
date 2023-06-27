@@ -1690,7 +1690,7 @@ public class ResponseDemo4 extends HttpServlet {
 
 ![1628866403891](assets/1628866403891.png)
 
- 2.2 将`资料\1. 登陆注册案例\2. MyBatis环境\User.java`拷贝到com.itheima.pojo
+ 2.2 将`资料\1. 登陆注册案例\2. MyBatis环境\User.java`拷贝到com.beisheng.pojo
 
 ![1628866560738](assets/1628866560738.png)
 
@@ -1722,7 +1722,7 @@ public class ResponseDemo4 extends HttpServlet {
 <configuration>
     <!--起别名-->
     <typeAliases>
-        <package name="com.itheima.pojo"/>
+        <package name="com.beisheng.pojo"/>
     </typeAliases>
 
     <environments default="development">
@@ -1743,12 +1743,12 @@ public class ResponseDemo4 extends HttpServlet {
     </environments>
     <mappers>
         <!--扫描mapper-->
-        <package name="com.itheima.mapper"/>
+        <package name="com.beisheng.mapper"/>
     </mappers>
 </configuration>
 ```
 
-4.2 在com.itheima.mapper包下创建UserMapper接口
+4.2 在com.beisheng.mapper包下创建UserMapper接口
 
 ```java
 public interface UserMapper {

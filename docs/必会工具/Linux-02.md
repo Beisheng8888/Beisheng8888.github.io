@@ -857,7 +857,7 @@ yum install git			在线安装git
 
 ```
 cd /usr/local/
-git clone https://gitee.com/ChuanZhiBoKe/helloworld.git
+git clone https://gitee.com/beisheng/helloworld.git
 ```
 
 ![image-20210815150452988](assets/image-20210815150452988.png)

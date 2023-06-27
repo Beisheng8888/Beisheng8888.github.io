@@ -85,10 +85,10 @@ spring:
 ##### ⑥：定义数据接口，继承**BaseMapper**
 
 ```java
-package com.itheima.dao;
+package com.beisheng.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.itheima.domain.User;
+import com.beisheng.domain.User;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper
@@ -100,10 +100,10 @@ public interface UserDao extends BaseMapper<User> {
 ##### ⑦：测试类中注入dao接口，测试功能
 
 ```java
-package com.itheima;
+package com.beisheng;
 
-import com.itheima.dao.UserDao;
-import com.itheima.domain.User;
+import com.beisheng.dao.UserDao;
+import com.beisheng.domain.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -154,10 +154,10 @@ public class Mybatisplus01QuickstartApplicationTests {
 ![image-20210815150629727](assets/image-20210815150629727.png)
 
 ```java
-package com.itheima;
+package com.beisheng;
 
-import com.itheima.dao.UserDao;
-import com.itheima.domain.User;
+import com.beisheng.dao.UserDao;
+import com.beisheng.domain.User;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -174,7 +174,7 @@ class Mybatisplus01QuickstartApplicationTests {
     void testSave() {
         User user = new User();
         user.setName("567");
-        user.setPassword("itheima");
+        user.setPassword("beisheng");
         user.setAge(12);
         user.setTel("4006184000");
         userDao.insert(user);
@@ -231,7 +231,7 @@ class Mybatisplus01QuickstartApplicationTests {
 
 
 ```java
-package com.itheima.domain;
+package com.beisheng.domain;
 
 import lombok.*;
 /*
@@ -272,7 +272,7 @@ public class User {
 **①：设置分页拦截器作为Spring管理的bean**
 
 ```java
-package com.itheima.config;
+package com.beisheng.config;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
@@ -737,7 +737,7 @@ userDao.selectBatchIds(list);
 ##### ②：实体类中添加对应字段，并设定当前字段为逻辑删除标记字段
 
 ```java
-package com.itheima.domain;
+package com.beisheng.domain;
 
 import com.baomidou.mybatisplus.annotation.*;
 
@@ -793,7 +793,7 @@ mybatis-plus:
 ##### ②：实体类中添加对应字段，并设定当前字段为逻辑删除标记字段
 
 ```java
-package com.itheima.domain;
+package com.beisheng.domain;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableLogic;
@@ -814,7 +814,7 @@ public class User {
 ##### ③：配置乐观锁拦截器实现锁机制对应的动态SQL语句拼装
 
 ```java
-package com.itheima.config;
+package com.beisheng.config;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
@@ -906,7 +906,7 @@ public void testUpdate() {
 - 第二步：编写代码生成器类
 
 ```java
-package com.itheima;
+package com.beisheng;
 
 import com.baomidou.mybatisplus.generator.AutoGenerator;
 import com.baomidou.mybatisplus.generator.config.DataSourceConfig;

@@ -237,7 +237,7 @@ HTTP协议有它自己的一些特点，分别是:
 在前面我们导入到IDEA中的http项目中，有一个Server.java类，这里面就是自定义的一个服务器代码，主要使用到的是`ServerSocket`和`Socket`
 
 ```java
-package com.itheima;
+package com.beisheng;
 
 import sun.misc.IOUtils;
 
@@ -813,7 +813,7 @@ Web项目的结构分为:开发中的项目和开发完可以部署的Web项目,
 2. 创建:定义一个类，实现Servlet接口，并重写接口中所有方法，并在service方法中输入一句话
 
 ```java
-package com.itheima.web;
+package com.beisheng.web;
 
 import javax.servlet.*;
 import java.io.IOException;
@@ -919,7 +919,7 @@ Servlet程序已经能正常运行，但是我们需要思考个问题: 我们�
 * 通过案例演示下上述的生命周期
 
   ```java
-  package com.itheima.web;
+  package com.beisheng.web;
 
   import javax.servlet.*;
   import javax.servlet.annotation.WebServlet;
@@ -1043,7 +1043,7 @@ ServletConfig getServletConfig()
 ServletConfig对象，在init方法的参数中有，而Tomcat Web服务器在创建Servlet对象的时候会调用init方法，必定会传入一个ServletConfig对象，我们只需要将服务器传过来的ServletConfig进行返回即可。具体如何操作?
 
 ```java
-package com.itheima.web;
+package com.beisheng.web;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -1158,7 +1158,7 @@ Servlet的简化编写就介绍完了，接着需要思考两个问题:
 针对问题一，我们需要回顾之前的知识点==前端发送GET和POST请求的时候，参数的位置不一致，GET请求参数在请求行中，POST请求参数在请求体中==，为了能处理不同的请求方式，我们得在service方法中进行判断，然后写不同的业务处理，这样能实现，但是每个Servlet类中都将有相似的代码，针对这个问题，有什么可以优化的策略么?
 
 ```java
-package com.itheima.web;
+package com.beisheng.web;
 
 import javax.servlet.*;
 import javax.servlet.annotation.WebServlet;
@@ -1207,7 +1207,7 @@ public class ServletDemo5 implements Servlet {
 要解决上述问题，我们可以对Servlet接口进行继承封装，来简化代码开发。
 
 ```java
-package com.itheima.web;
+package com.beisheng.web;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -1360,7 +1360,7 @@ Servlet类编写好后，要想被访问到，就需要配置其访问路径（=
   ![1627272805178](assets/1627272805178.png)
 
   ```java
-  package com.itheima.web;
+  package com.beisheng.web;
 
   import javax.servlet.ServletRequest;
   import javax.servlet.ServletResponse;
@@ -1429,7 +1429,7 @@ Servlet类编写好后，要想被访问到，就需要配置其访问路径（=
       ![1627273184095](assets/1627273184095.png)
 
       ```java
-      package com.itheima.web;
+      package com.beisheng.web;
 
       import javax.servlet.ServletRequest;
       import javax.servlet.ServletResponse;
@@ -1472,7 +1472,7 @@ Servlet类编写好后，要想被访问到，就需要配置其访问路径（=
   >   ![1627273194118](assets/1627273194118.png)
 
     ```java
-    package com.itheima.web;
+    package com.beisheng.web;
 
     import javax.servlet.ServletRequest;
     import javax.servlet.ServletResponse;
@@ -1513,7 +1513,7 @@ Servlet类编写好后，要想被访问到，就需要配置其访问路径（=
     ![1627273201370](assets/1627273201370.png)
 
     ```java
-    package com.itheima.web;
+    package com.beisheng.web;
 
     import javax.servlet.ServletRequest;
     import javax.servlet.ServletResponse;
@@ -1540,7 +1540,7 @@ Servlet类编写好后，要想被访问到，就需要配置其访问路径（=
     访问路径`http://localhost:8080/demo-web/任意`
 
     ```java
-    package com.itheima.web;
+    package com.beisheng.web;
 
     import javax.servlet.ServletRequest;
     import javax.servlet.ServletResponse;
@@ -1591,7 +1591,7 @@ Servlet类编写好后，要想被访问到，就需要配置其访问路径（=
 * 编写Servlet类
 
 ```java
-package com.itheima.web;
+package com.beisheng.web;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
@@ -1628,7 +1628,7 @@ public class ServletDemo13 extends MyHttpServlet {
         <!-- servlet的名称，名字任意-->
         <servlet-name>demo13</servlet-name>
         <!--servlet的类全名-->
-        <servlet-class>com.itheima.web.ServletDemo13</servlet-class>
+        <servlet-class>com.beisheng.web.ServletDemo13</servlet-class>
     </servlet>
 
     <!--

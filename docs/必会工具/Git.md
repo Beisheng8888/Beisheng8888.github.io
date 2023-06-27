@@ -172,7 +172,7 @@ Git中存在两种类型的仓库，即**本地仓库**和**远程仓库**。那
 
 **注意**：每个Git远程仓库都会对应一个网络地址，点击【克隆/下载】按钮，在弹出窗口点击【复制】按钮即可复制网络地址，地址如下：
 
-https://gitee.com/ChuanZhiBoKe/myGitRepo.git
+https://gitee.com/beisheng/myGitRepo.git
 
 
 

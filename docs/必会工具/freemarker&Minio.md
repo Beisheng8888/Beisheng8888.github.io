@@ -41,8 +41,8 @@ pom.xml如下
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>heima-leadnews-test</artifactId>
-        <groupId>com.heima</groupId>
+        <artifactId>beisheng-leadnews-test</artifactId>
+        <groupId>com.beisheng</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -109,7 +109,7 @@ spring:
 在freemarker的测试工程下创建模型类型用于测试
 
 ```java
-package com.heima.freemarker.entity;
+package com.beisheng.freemarker.entity;
 
 import lombok.Data;
 
@@ -216,7 +216,7 @@ Hello ${name} <br>
 #### 2.2.6) 创建启动类
 
 ```java
-package com.heima.freemarker;
+package com.beisheng.freemarker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -911,11 +911,11 @@ spring:
 ②：在test下创建测试类
 
 ```java
-package com.heima.freemarker.test;
+package com.beisheng.freemarker.test;
 
 
-import com.heima.freemarker.FreemarkerDemoApplication;
-import com.heima.freemarker.entity.Student;
+import com.beisheng.freemarker.FreemarkerDemoApplication;
+import com.beisheng.freemarker.entity.Student;
 import freemarker.template.Configuration;
 import freemarker.template.Template;
 import freemarker.template.TemplateException;
@@ -1072,8 +1072,8 @@ Access Key为minio   Secret_key 为minio123    进入系统后可以看到主界
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>heima-leadnews-test</artifactId>
-        <groupId>com.heima</groupId>
+        <artifactId>beisheng-leadnews-test</artifactId>
+        <groupId>com.beisheng</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
@@ -1109,7 +1109,7 @@ Access Key为minio   Secret_key 为minio123    进入系统后可以看到主界
 引导类：
 
 ```java
-package com.heima.minio;
+package com.beisheng.minio;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -1127,7 +1127,7 @@ public class MinIOApplication {
 创建测试类，上传html文件
 
 ```java
-package com.heima.minio.test;
+package com.beisheng.minio.test;
 
 import io.minio.MinioClient;
 import io.minio.PutObjectArgs;
@@ -1169,7 +1169,7 @@ public class MinIOTest {
 
 ### 3.5 封装MinIO为starter
 
-#### 3.5.1 创建模块heima-file-starter
+#### 3.5.1 创建模块beisheng-file-starter
 
 导入依赖
 
@@ -1205,7 +1205,7 @@ public class MinIOTest {
 MinIOConfigProperties
 
 ```java
-package com.heima.file.config;
+package com.beisheng.file.config;
 
 
 import lombok.Data;
@@ -1228,9 +1228,9 @@ public class MinIOConfigProperties implements Serializable {
 MinIOConfig
 
 ```java
-package com.heima.file.config;
+package com.beisheng.file.config;
 
-import com.heima.file.service.FileStorageService;
+import com.beisheng.file.service.FileStorageService;
 import io.minio.MinioClient;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -1266,12 +1266,12 @@ public class MinIOConfig {
 FileStorageService
 
 ```java
-package com.heima.file.service;
+package com.beisheng.file.service;
 
 import java.io.InputStream;
 
 /**
- * @author itheima
+ * @author beisheng
  */
 public interface FileStorageService {
 
@@ -1314,12 +1314,12 @@ public interface FileStorageService {
 MinIOFileStorageService
 
 ```java
-package com.heima.file.service.impl;
+package com.beisheng.file.service.impl;
 
 
-import com.heima.file.config.MinIOConfig;
-import com.heima.file.config.MinIOConfigProperties;
-import com.heima.file.service.FileStorageService;
+import com.beisheng.file.config.MinIOConfig;
+import com.beisheng.file.config.MinIOConfigProperties;
+import com.beisheng.file.service.FileStorageService;
 import io.minio.GetObjectArgs;
 import io.minio.MinioClient;
 import io.minio.PutObjectArgs;
@@ -1486,14 +1486,14 @@ public class MinIOFileStorageService implements FileStorageService {
 
 ```java
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.heima.file.service.impl.MinIOFileStorageService
+  com.beisheng.file.service.impl.MinIOFileStorageService
 ```
 
 
 
 #### 3.5.5 其他微服务使用
 
-第一，导入heima-file-starter的依赖
+第一，导入beisheng-file-starter的依赖
 
 第二，在微服务中添加minio所需要的配置
 
@@ -1509,11 +1509,11 @@ minio:
 第三，在对应使用的业务类中注入FileStorageService，样例如下：
 
 ```java
-package com.heima.minio.test;
+package com.beisheng.minio.test;
 
 
-import com.heima.file.service.FileStorageService;
-import com.heima.minio.MinioApplication;
+import com.beisheng.file.service.FileStorageService;
+import com.beisheng.minio.MinioApplication;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

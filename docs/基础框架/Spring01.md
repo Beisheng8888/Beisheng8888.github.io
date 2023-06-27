@@ -211,7 +211,7 @@ public class BookServiceImpl implements BookService {
     	id属性：表示给bean起名字
     	class属性：表示给bean定义类型
 	-->
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl"></bean>
+    <bean id="bookService" class="com.beisheng.service.impl.BookServiceImpl"></bean>
 
 </beans>
 ```
@@ -304,9 +304,9 @@ public class BookServiceImpl implements BookService {
     	id属性：表示给bean起名字
     	class属性：表示给bean定义类型
 	-->
-    <bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
+    <bean id="bookDao" class="com.beisheng.dao.impl.BookDaoImpl"/>
 
-    <bean id="bookService" class="com.itheima.service.impl.BookServiceImpl">
+    <bean id="bookService" class="com.beisheng.service.impl.BookServiceImpl">
         <!--配置server与dao的关系
 			property标签：表示配置当前bean的属性
         	name属性：表示配置哪一个具体的属性
@@ -408,7 +408,7 @@ public class BookDaoImpl implements BookDao {
 
 ```xml
 <!--方式一：构造方法实例化bean-->
-<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
+<bean id="bookDao" class="com.beisheng.dao.impl.BookDaoImpl"/>
 ```
 
 - AppForInstanceBook测试类
@@ -462,7 +462,7 @@ public class OrderDaoFactory {
 
 ```xml
 <!--方式二：使用静态工厂实例化bean-->
-<bean id="orderDao" class="com.itheima.factory.OrderDaoFactory" factory-method="getOrderDao"/>
+<bean id="orderDao" class="com.beisheng.factory.OrderDaoFactory" factory-method="getOrderDao"/>
 ```
 
 ![image-20210729195248948](assets/image-20210729195248948.png)
@@ -515,7 +515,7 @@ public class UserDaoFactory {
 
 ```xml
 <!--方式三：使用实例工厂实例化bean-->
-<bean id="userFactory" class="com.itheima.factory.UserDaoFactory"/>
+<bean id="userFactory" class="com.beisheng.factory.UserDaoFactory"/>
 
 <bean id="userDao" factory-method="getUserDao" factory-bean="userFactory"/>
 ```
@@ -567,7 +567,7 @@ public class UserDaoFactoryBean implements FactoryBean<UserDao> {
 
 ```xml
 <!--方式四：使用FactoryBean实例化bean-->
-<bean id="userDao" class="com.itheima.factory.UserDaoFactoryBean"/>
+<bean id="userDao" class="com.beisheng.factory.UserDaoFactoryBean"/>
 ```
 
 > 使用之前的AppForInstanceUser测试类去运行看结果就行了。注意配置文件中id="userDao"是否重复。
@@ -617,7 +617,7 @@ public class BookDaoImpl implements BookDao {
 ```xml
 <!--init-method：设置bean初始化生命周期回调函数,此处填写init方法名-->
 <!--destroy-method：设置bean销毁生命周期回调函数，仅适用于单例对象，此处填写destory方法名-->
-<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl" init-method="init" destroy-method="destory"/>
+<bean id="bookDao" class="com.beisheng.dao.impl.BookDaoImpl" init-method="init" destroy-method="destory"/>
 ```
 
 - 测试类
@@ -769,8 +769,8 @@ setter方式注入使用什么子标签？
 > 配置中使用bean标签autowire属性设置自动装配的类型
 
 ```xml
-<bean id="bookDao" class="com.itheima.dao.impl.BookDaoImpl"/>
-<bean id="bookService" class="com.itheima.service.impl.BookServiceImpl" autowire="byType"/>
+<bean id="bookDao" class="com.beisheng.dao.impl.BookDaoImpl"/>
+<bean id="bookService" class="com.beisheng.service.impl.BookServiceImpl" autowire="byType"/>
 ```
 
 ##### 依赖自动装配特征
@@ -802,9 +802,9 @@ setter方式注入使用什么子标签？
 <property name="list">
     <list>
         <value>beisheng</value>
-        <value>itheima</value>
+        <value>beisheng</value>
         <value>boxuegu</value>
-        <value>chuanzhihui</value>
+        <value>beisheng</value>
     </list>
 </property>
 ```
@@ -815,7 +815,7 @@ setter方式注入使用什么子标签？
 <property name="set">
     <set>
         <value>beisheng</value>
-        <value>itheima</value>
+        <value>beisheng</value>
         <value>boxuegu</value>
         <value>boxuegu</value>
     </set>

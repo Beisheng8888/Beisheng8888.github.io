@@ -98,7 +98,7 @@ docker run -d --name kafka \
 （2）生产者发送消息
 
 ```java
-package com.heima.kafka.sample;
+package com.beisheng.kafka.sample;
 
 import org.apache.kafka.clients.producer.KafkaProducer;
 import org.apache.kafka.clients.producer.ProducerConfig;
@@ -127,7 +127,7 @@ public class ProducerQuickStart {
         KafkaProducer<String,String> producer = new KafkaProducer<String, String>(properties);
 
         //封装发送的消息
-        ProducerRecord<String,String> record = new ProducerRecord<String, String>("itheima-topic","100001","hello kafka");
+        ProducerRecord<String,String> record = new ProducerRecord<String, String>("beisheng-topic","100001","hello kafka");
 
         //3.发送消息
         producer.send(record);
@@ -144,7 +144,7 @@ public class ProducerQuickStart {
 （3）消费者接收消息
 
 ```java
-package com.heima.kafka.sample;
+package com.beisheng.kafka.sample;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
@@ -175,7 +175,7 @@ public class ConsumerQuickStart {
         KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(properties);
 
         //3.订阅主题
-        consumer.subscribe(Collections.singletonList("itheima-topic"));
+        consumer.subscribe(Collections.singletonList("beisheng-topic"));
 
         //当前线程一直处于监听状态
         while (true) {
@@ -531,7 +531,7 @@ spring:
 3.消息生产者
 
 ```java
-package com.heima.kafka.controller;
+package com.beisheng.kafka.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -555,7 +555,7 @@ public class HelloController {
 4.消息消费者
 
 ```java
-package com.heima.kafka.listener;
+package com.beisheng.kafka.listener;
 
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
@@ -600,10 +600,10 @@ public String hello(){
 - 接收消息
 
 ```java
-package com.heima.kafka.listener;
+package com.beisheng.kafka.listener;
 
 import com.alibaba.fastjson.JSON;
-import com.heima.kafka.pojo.User;
+import com.beisheng.kafka.pojo.User;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;

@@ -114,7 +114,7 @@
   }
   ```
 
-### 1.4 时间日期类练习 (应用) 
+### 1.4 时间日期类练习 (应用)
 
 + 需求
 
@@ -170,19 +170,19 @@
           }
 
       }
-    
+
   }
   ```
 
-## 2.JDK8时间日期类 
+## 2.JDK8时间日期类
 
-### 2.1 JDK8新增日期类 (理解) 
+### 2.1 JDK8新增日期类 (理解)
 
-+ LocalDate       表示日期（年月日）  
++ LocalDate       表示日期（年月日）
 + LocalTime       表示时间（时分秒）
 + LocalDateTime    表示时间+ 日期 （年月日时分秒）
 
-### 2.2 LocalDateTime创建方法 (应用) 
+### 2.2 LocalDateTime创建方法 (应用)
 
 + 方法说明
 
@@ -251,7 +251,7 @@
           int minute = localDateTime.getMinute();
           System.out.println("分钟为" + minute);
           //public int getHour()           获取小时
-    
+
           int hour = localDateTime.getHour();
           System.out.println("小时为" + hour);
       }
@@ -534,7 +534,7 @@
   - 把异常的名称，错误原因及异常出现的位置等信息输出在了控制台
   - 程序停止执行
 
-### 3.4 查看异常信息 (理解) 
+### 3.4 查看异常信息 (理解)
 
 控制台在打印异常信息时,会打印异常类名,异常出现的原因,异常出现的位置
 
@@ -548,7 +548,7 @@
 
   ```java
   public void 方法() throws 异常类名 {
-      
+
   }
   ```
 
@@ -586,7 +586,7 @@
   - 编译时异常必须要进行处理，两种处理方案：try...catch …或者 throws，如果采用 throws 这种方案，在方法上进行显示声明,将来谁调用这个方法谁处理
   - 运行时异常因为在运行时才会发生,所以在方法后面可以不写,运行时出现异常默认交给jvm处理
 
-### 3.6 throw抛出异常 (应用) 
+### 3.6 throw抛出异常 (应用)
 
 + 格式
 
@@ -730,15 +730,15 @@
               //public void printStackTrace():把异常的错误信息输出在控制台
               e.printStackTrace();
   //            java.lang.ArrayIndexOutOfBoundsException: Index 3 out of bounds for length 3
-  //            at com.itheima_02.ExceptionDemo02.method(ExceptionDemo02.java:18)
-  //            at com.itheima_02.ExceptionDemo02.main(ExceptionDemo02.java:11)
+  //            at com.beisheng_02.ExceptionDemo02.method(ExceptionDemo02.java:18)
+  //            at com.beisheng_02.ExceptionDemo02.main(ExceptionDemo02.java:11)
 
           }
       }
   }
   ```
 
-### 3.9 异常的练习 (应用) 
+### 3.9 异常的练习 (应用)
 
 + 需求
 

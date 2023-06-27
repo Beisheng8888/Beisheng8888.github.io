@@ -324,8 +324,8 @@ bookDao.save();
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-	 <!--扫描com.itheima包及其子包下的类中注解-->
-    <context:component-scan base-package="com.itheima"/>
+	 <!--扫描com.beisheng包及其子包下的类中注解-->
+    <context:component-scan base-package="com.beisheng"/>
 </beans>
 ```
 
@@ -418,7 +418,7 @@ public class BookServiceImpl implements BookService {
 - @ComponentScan注解用于设定扫描路径，此注解只能添加一次，多个数据请用数组格式
 
 ```java
-@ComponentScan({com.itheima.service","com.itheima.dao"})
+@ComponentScan({com.beisheng.service","com.beisheng.dao"})
 ```
 
 - 读取Spring核心配置文件初始化容器对象切换为读取Java配置类初始化容器对象
@@ -437,10 +437,10 @@ ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig.cla
 ```java
 //声明当前类为Spring配置类
 @Configuration
-//Spring注解扫描，相当于<context:component-scan base-package="com.itheima"/>
-@ComponentScan("com.itheima")
+//Spring注解扫描，相当于<context:component-scan base-package="com.beisheng"/>
+@ComponentScan("com.beisheng")
 //设置bean扫描路径，多个路径书写为字符串数组格式
-//@ComponentScan({"com.itheima.service","com.itheima.dao"})
+//@ComponentScan({"com.beisheng.service","com.beisheng.dao"})
 public class SpringConfig {
 }
 ```
@@ -583,7 +583,7 @@ public class BookDaoImpl implements BookDao {
 
 ```java
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan("com.beisheng")
 //@PropertySource加载properties配置文件
 @PropertySource({"classpath:jdbc.properties"}) //{}可以省略不写
 public class SpringConfig {
@@ -623,7 +623,7 @@ public class JdbcConfig {
 
 ```java
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan("com.beisheng")
 //@Import:导入配置信息
 @Import({JdbcConfig.class})
 public class SpringConfig {
@@ -634,7 +634,7 @@ public class SpringConfig {
 
 ```java
 @Configuration
-@ComponentScan({"com.itheima.config","com.itheima.service","com.itheima.dao"})  //只要com.itheima.config包扫到了就行，三个包可以合并写成com.itheima
+@ComponentScan({"com.beisheng.config","com.beisheng.service","com.beisheng.dao"})  //只要com.beisheng.config包扫到了就行，三个包可以合并写成com.beisheng
 public class SpringConfig {
 }
 ```
@@ -853,7 +853,7 @@ public class MybatisConfig {
     @Bean
     public SqlSessionFactoryBean sqlSessionFactory(DataSource dataSource){
         SqlSessionFactoryBean ssfb = new SqlSessionFactoryBean();
-        ssfb.setTypeAliasesPackage("com.itheima.domain");
+        ssfb.setTypeAliasesPackage("com.beisheng.domain");
         ssfb.setDataSource(dataSource);
         return ssfb;
     }
@@ -861,7 +861,7 @@ public class MybatisConfig {
     @Bean
     public MapperScannerConfigurer mapperScannerConfigurer(){
         MapperScannerConfigurer msc = new MapperScannerConfigurer();
-        msc.setBasePackage("com.itheima.dao");
+        msc.setBasePackage("com.beisheng.dao");
         return msc;
     }
 }
@@ -871,7 +871,7 @@ public class MybatisConfig {
 
 ```java
 @Configuration
-@ComponentScan("com.itheima")
+@ComponentScan("com.beisheng")
 //@PropertySource：加载类路径jdbc.properties文件
 @PropertySource("classpath:jdbc.properties")
 @Import({JdbcConfig.class,MybatisConfig.class})

@@ -277,7 +277,7 @@ xxl:
 ### 1.5.4 新建配置类
 
 ```java
-package com.heima.xxljob.config;
+package com.beisheng.xxljob.config;
 
 import com.xxl.job.core.executor.impl.XxlJobSpringExecutor;
 import org.slf4j.Logger;
@@ -322,7 +322,7 @@ public class XxlJobConfig {
 ### 1.5.4 任务代码，重要注解:@XxlJob(“**JobHandler**”)
 
 ```java
-package com.heima.xxljob.job;
+package com.beisheng.xxljob.job;
 
 import com.xxl.job.core.handler.annotation.XxlJob;
 import org.springframework.stereotype.Component;
@@ -525,7 +525,7 @@ xxl:
 代码
 
 ```java
-package com.heima.xxljob.job;
+package com.beisheng.xxljob.job;
 
 import com.xxl.job.core.context.XxlJobHelper;
 import com.xxl.job.core.handler.annotation.XxlJob;

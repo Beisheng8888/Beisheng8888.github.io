@@ -923,8 +923,8 @@ C. 使用*通配符删除目录
 举例:
     cp hello.txt beisheng/            将hello.txt复制到beisheng目录中
     cp hello.txt ./hi.txt           将hello.txt复制到当前目录，并改名为hi.txt
-    cp -r beisheng/ ./itheima/    	将beisheng目录和目录下所有文件复制到itheima目录下
-    cp -r beisheng/* ./itheima/ 	 	将beisheng目录下所有文件复制到itheima目录下
+    cp -r beisheng/ ./beisheng/    	将beisheng目录和目录下所有文件复制到beisheng目录下
+    cp -r beisheng/* ./beisheng/ 	 	将beisheng目录下所有文件复制到beisheng目录下
 ```
 
 
@@ -951,10 +951,10 @@ C. 使用*通配符删除目录
 
 举例:
     mv hello.txt hi.txt                 将hello.txt改名为hi.txt
-    mv hi.txt itheima/                  将文件hi.txt移动到itheima目录中
-    mv hi.txt itheima/hello.txt   		将hi.txt移动到itheima目录中，并改名为hello.txt
-    mv beisheng/ itheima/                 如果itheima目录不存在，将beisheng目录改名为itheima
-    mv beisheng/ itheima/                 如果itheima目录存在，将beisheng目录移动到itheima目录中
+    mv hi.txt beisheng/                  将文件hi.txt移动到beisheng目录中
+    mv hi.txt beisheng/hello.txt   		将hi.txt移动到beisheng目录中，并改名为hello.txt
+    mv beisheng/ beisheng/                 如果beisheng目录不存在，将beisheng目录改名为beisheng
+    mv beisheng/ beisheng/                 如果beisheng目录存在，将beisheng目录移动到beisheng目录中
 ```
 
 

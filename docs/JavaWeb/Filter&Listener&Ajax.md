@@ -118,7 +118,7 @@ Filter 表示过滤器，是 JavaWeb 三大组件(Servlet、Filter、Listener)�
 
 ![img](assets/image-20210823192353031.png)
 
-接下来编写过滤器。过滤器是 Web 三大组件之一，所以我们将 `filter` 创建在 `com.itheima.web.filter` 包下，起名为 `FilterDemo`
+接下来编写过滤器。过滤器是 Web 三大组件之一，所以我们将 `filter` 创建在 `com.beisheng.web.filter` 包下，起名为 `FilterDemo`
 
 ```java
 @WebFilter("/*")
@@ -379,7 +379,7 @@ public class FilterDemo implements Filter {
 
 ##### 1.6.3.1  创建Filter
 
-在 `brand-demo` 工程创建 `com.itheima.web.filter`  包，在该下创建名为 `LoginFilter` 的过滤器
+在 `brand-demo` 工程创建 `com.beisheng.web.filter`  包，在该下创建名为 `LoginFilter` 的过滤器
 
 ```java
 @WebFilter("/*")
@@ -663,7 +663,7 @@ AJAX 作用有以下两方面：
 
 #### 3.2.1 服务端实现
 
-在项目的创建 `com.itheima.web.servlet` ，并在该包下创建名为  `AjaxServlet` 的servlet
+在项目的创建 `com.beisheng.web.servlet` ，并在该包下创建名为  `AjaxServlet` 的servlet
 
 ```java
 @WebServlet("/ajaxServlet")
@@ -1441,7 +1441,7 @@ axios({
 
 #### 6.2.2  后端实现
 
-在 `com.itheima.web` 包下创建名为 `SelectAllServlet` 的 `servlet`，具体的逻辑如下：
+在 `com.beisheng.web` 包下创建名为 `SelectAllServlet` 的 `servlet`，具体的逻辑如下：
 
 * 调用 service 的 `selectAll()` 方法进行查询所有的逻辑处理
 * 将查询到的集合数据转换为 json 数据。我们将此过程称为 ==序列化==；如果是将 json 数据转换为 Java 对象，我们称之为 ==反序列化==
@@ -1647,7 +1647,7 @@ document.getElementById("brandTable").innerHTML = tableData;
 
 #### 6.3.1  后端实现
 
-在 `com.itheima.web` 包下创建名为 `AddServlet` 的 `servlet`，具体的逻辑如下：
+在 `com.beisheng.web` 包下创建名为 `AddServlet` 的 `servlet`，具体的逻辑如下：
 
 * 获取请求参数
 

@@ -109,7 +109,7 @@ public class UserController {
 ```java
 //springmvc配置类，本质上还是一个spring配置类
 @Configuration
-@ComponentScan("com.itheima.controller")
+@ComponentScan("com.beisheng.controller")
 public class SpringMvcConfig {
 }
 ```
@@ -285,9 +285,9 @@ public String save(){
   2. 功能bean（DataSource等）
 
 - SpringMVC相关bean加载控制
-  1. SpringMVC加载的bean对应的包均在com.itheima.controller包内
+  1. SpringMVC加载的bean对应的包均在com.beisheng.controller包内
 - Spring相关bean加载控制
-  1. 方式一：Spring加载的bean设定扫描范围为com.itheima，排除掉controller包内的bean
+  1. 方式一：Spring加载的bean设定扫描范围为com.beisheng，排除掉controller包内的bean
   2. 方式二：Spring加载的bean设定扫描范围为精准范围，例如service包、dao包等
   3. 方式三：不区分Spring与SpringMVC的环境，加载到同一个环境中
 
@@ -299,7 +299,7 @@ public String save(){
 
 ```java
 @Configuration
-@ComponentScan(value = "com.itheima",
+@ComponentScan(value = "com.beisheng",
                excludeFilters = @ComponentScan.Filter(
                    type = FilterType.ANNOTATION,
                    classes = Controller.class
@@ -693,7 +693,7 @@ public String listParam(@RequestParam List<String> likes){
 
 ```java
 @Configuration
-@ComponentScan("com.itheima.controller")
+@ComponentScan("com.beisheng.controller")
 //开启json数据类型自动转换
 @EnableWebMvc
 public class SpringMvcConfig {
@@ -728,7 +728,7 @@ public String listParamForJson(@RequestBody List<String> likes){
 
 ```java
 @Configuration
-@ComponentScan("com.itheima.controller")
+@ComponentScan("com.beisheng.controller")
 @EnableWebMvc
 public class SpringMvcConfig {
 }
@@ -1229,7 +1229,7 @@ public class ServletContainersInitConfig extends AbstractAnnotationConfigDispatc
 
 //SpringMVC配置类
 @Configuration
-@ComponentScan({"com.itheima.controller","com.itheima.config"})
+@ComponentScan({"com.beisheng.controller","com.beisheng.config"})
 @EnableWebMvc
 public class SpringMvcConfig {
 }

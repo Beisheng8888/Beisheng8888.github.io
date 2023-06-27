@@ -255,7 +255,7 @@ JSP 脚本有如下三个分类：
 
 #### 4.2.2  实现
 
-* 将资料 `资料\1. JSP案例素材` 中的 `Brand.java` 文件放置到项目的 `com.itheima.pojo` 包下
+* 将资料 `资料\1. JSP案例素材` 中的 `Brand.java` 文件放置到项目的 `com.beisheng.pojo` 包下
 
 * 在项目的 `webapp` 中创建 `brand.jsp` ，并将 `brand.html`页面中的内容拷贝过来。`brand.jsp` 内容如下
 
@@ -443,7 +443,7 @@ JSP 脚本有如下三个分类：
 #### 4.2.3  成品代码
 
 ```jsp
-<%@ page import="com.itheima.pojo.Brand" %>
+<%@ page import="com.beisheng.pojo.Brand" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.ArrayList" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -908,9 +908,9 @@ MVC 是一种分层开发的模式，其中：
 
 三层架构的每一层都有特有的包名称：
 
-* 表现层： `com.itheima.controller` 或者 `com.itheima.web`
-* 业务逻辑层：`com.itheima.service`
-* 数据访问层：`com.itheima.dao` 或者 `com.itheima.mapper`
+* 表现层： `com.beisheng.controller` 或者 `com.beisheng.web`
+* 业务逻辑层：`com.beisheng.service`
+* 数据访问层：`com.beisheng.dao` 或者 `com.beisheng.mapper`
 
 后期我们还会学习一些框架，不同的框架是对不同层进行封装的
 
@@ -1187,7 +1187,7 @@ public class Brand {
 <configuration>
     <!--起别名-->
     <typeAliases>
-        <package name="com.itheima.pojo"/>
+        <package name="com.beisheng.pojo"/>
     </typeAliases>
 
     <environments default="development">
@@ -1203,19 +1203,19 @@ public class Brand {
     </environments>
     <mappers>
         <!--扫描mapper-->
-        <package name="com.itheima.mapper"/>
+        <package name="com.beisheng.mapper"/>
     </mappers>
 </configuration>
 ```
 
-在 `resources` 下创建放置映射配置文件的目录结构 `com/itheima/mapper`，并在该目录下创建映射配置文件 `BrandMapper.xml`
+在 `resources` 下创建放置映射配置文件的目录结构 `com/beisheng/mapper`，并在该目录下创建映射配置文件 `BrandMapper.xml`
 
 ```xml
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.itheima.mapper.BrandMapper">
+<mapper namespace="com.beisheng.mapper.BrandMapper">
 
 </mapper>
 ```
@@ -1245,7 +1245,7 @@ List<Brand> selectAll();
 
 #### 8.2.2  编写工具类
 
-在 `com.itheima` 包下创建 `utils` 包，并在该包下创建名为 `SqlSessionFactoryUtils` 工具类
+在 `com.beisheng` 包下创建 `utils` 包，并在该包下创建名为 `SqlSessionFactoryUtils` 工具类
 
 ```java
 public class SqlSessionFactoryUtils {
@@ -1394,7 +1394,7 @@ public class SelectAllServlet extends HttpServlet {
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.itheima.mapper.BrandMapper">
+<mapper namespace="com.beisheng.mapper.BrandMapper">
 
     <resultMap id="brandResultMap" type="brand">
         <result column="brand_name" property="brandName"></result>
