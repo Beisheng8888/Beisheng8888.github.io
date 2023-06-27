@@ -1,10 +1,10 @@
-## 集成minio实现分布式文件存储
+# 集成minio实现分布式文件存储
 
 
 
 框架默认存储使用的本地磁盘，对于一些文件较大较多且有数据备份、数据安全、分布式等等就满足不了我们的要求，对于这种情况我们可以集成`OSS`对象存储服务。 `minio`是目前`github`上`star`最多的数据存储框架。`minio`可以用来搭建分布式存储服务，可以很好的和机器学习相结合。
 
-###  1、`xxx-common/pom.xml`文件添加`minio`依赖。
+##  1、`xxx-common/pom.xml`文件添加`minio`依赖。
 
 
 
@@ -17,7 +17,7 @@
 </dependency>
 ```
 
-### 2、`ruoyi-admin`文件`application.yml`，添加`minio`配置
+## 2、`ruoyi-admin`文件`application.yml`，添加`minio`配置
 
 ```yml
 # Minio配置
@@ -28,7 +28,7 @@ minio:
   bucketName: ruoyi
 ```
 
-### 3、`CommonController.java`自定义`Minio`服务器上传请求
+## 3、`CommonController.java`自定义`Minio`服务器上传请求
 
 ```java
 /**
@@ -57,7 +57,7 @@ public AjaxResult uploadFileMinio(MultipartFile file) throws Exception
 
 
 
-### 4、`MinioConfig.java` 自定义`Minio`配置信息
+## 4、`MinioConfig.java` 自定义`Minio`配置信息
 
 在\xxx-common\src\main\java\com\xxx\common\config
 
@@ -147,7 +147,7 @@ public class MinioConfig
 
 
 
-### 5、 `Minio.java` 文件存储工具类
+## 5、 `Minio.java` 文件存储工具类
 
 ```java
 package com.xxx.common.utils.file;
@@ -503,7 +503,7 @@ public class MinioUtil {
 
 
 
-### 6、 `FileUploadUtils.java` 文件上传工具类
+## 6、 `FileUploadUtils.java` 文件上传工具类
 
 ```java
 package com.xxx.common.utils.file;
@@ -543,7 +543,7 @@ public class FileUploadUtils
      * 本地默认上传的地址
      */
     private static String defaultBaseDir = RuoYiConfig.getProfile();
-    
+
     /**
      * Minio默认上传的地址
      */
@@ -558,7 +558,7 @@ public class FileUploadUtils
     {
         return defaultBaseDir;
     }
-    
+
     public static String getBucketName()
     {
         return bucketName;
@@ -652,7 +652,7 @@ public class FileUploadUtils
             throw new IOException(e.getMessage(), e);
         }
     }
-    
+
     /**
      * 自定义bucketName配置上传到Minio服务器
      *
@@ -793,7 +793,7 @@ public class FileUploadUtils
 
     /**
      * 获取文件名的后缀
-     * 
+     *
      * @param file 表单文件
      * @return 后缀名
      */
