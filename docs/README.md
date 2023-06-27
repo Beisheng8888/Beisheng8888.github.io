@@ -134,8 +134,6 @@ Linux部署
 ## 🌈 主题选择
 
 <div class="demo-theme-preview" >
-  <a data-theme="theme-simple">simple</a>
-  <a data-theme="theme-simple-dark">simple-dark</a>
   <a data-theme="vue">vue</a>
   <a data-theme="buble">buble</a>
   <a data-theme="dark">dark</a>
