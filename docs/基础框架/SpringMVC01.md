@@ -448,7 +448,7 @@ public String commonParam(String name ,int age){
 }
 ```
 
-- 问题：如果同学们传递的参数是中文试试，你们会发现接收到的参数出现了中文乱码问题。
+- 问题：如果你传递的参数是中文试试，你们会发现接收到的参数出现了中文乱码问题。
 - 原因：tomcat 8.5版本之后GET请求就不再出现中文乱码问题，但是我们使用的是tomcat7插件，所以会出现GET请求中文乱码问题。
 - 解决：在pom.xml添加tomcat7插件处配置UTF-8字符集，解决GET请求中文乱码问题。
 
@@ -571,7 +571,7 @@ public String commonParamDifferentName(@RequestParam("name") String userName , i
 public class User {
     private String name;
     private int age;
-    //同学们自己添加getter/setter/toString()方法
+    //你自己添加getter/setter/toString()方法
 }
 ```
 
@@ -596,7 +596,7 @@ public class User {
     private String name;
     private int age;
     private Address address;
-    //同学们自己添加getter/setter/toString()方法
+    //你自己添加getter/setter/toString()方法
 }
 public class Address {
     private String province;
@@ -1202,7 +1202,7 @@ public class Book {
     private String type;
     private String name;
     private String description;
-    //同学们自己重写getter、setter、toString()方法...
+    //你自己重写getter、setter、toString()方法...
 }
 
 //SpringMVC容器初始化类

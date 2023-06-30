@@ -257,7 +257,7 @@ public class Book {
     private String type;
     private String name;
     private String description;
-    //同学们自己添加getter、setter、toString()方法
+    //你自己添加getter、setter、toString()方法
 }
 ```
 - BookDao接口
@@ -428,7 +428,7 @@ public class BookServiceTest {
 
 ![image-20210805165801606](assets/image-20210805165801606.png)
 
-> 这里就以保存图书为例，其他接口同学们自己测试
+> 这里就以保存图书为例，其他接口你自己测试
 
 
 
@@ -470,7 +470,7 @@ public class Result {
         this.code = code;
         this.msg = msg;
     }
-     //同学们自己添加getter、setter、toString()方法
+     //你自己添加getter、setter、toString()方法
 }
 ```
 
