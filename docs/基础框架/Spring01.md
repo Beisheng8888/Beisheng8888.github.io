@@ -2,7 +2,7 @@
 
 ## 一、Spring简介
 
-### 1 Spring课程介绍
+### 1 Spring介绍
 
 #### 问题导入
 
@@ -76,7 +76,7 @@
 
 ![image-20210729172352627](assets/image-20210729172352627.png)
 
-#### 3.2 Spring Framework课程学习路线
+#### 3.2 Spring Framework学习路线
 
 ![image-20210729172513669](assets/image-20210729172513669.png)
 

@@ -5,7 +5,7 @@
 
 ### 1.1  Filter概述
 
-Filter 表示过滤器，是 JavaWeb 三大组件(Servlet、Filter、Listener)之一。Servlet 我们之前都已经学习过了，Filter和Listener 我们今天都会进行学习。
+Filter 表示过滤器，是 JavaWeb 三大组件(Servlet、Filter、Listener)之一。
 
 过滤器可以把对资源的请求==拦截==下来，从而实现一些特殊的功能。
 

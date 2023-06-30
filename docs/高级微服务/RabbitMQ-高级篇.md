@@ -39,7 +39,7 @@
 
 下面我们就通过案例来演示每一个步骤。
 
-首先，导入课前资料提供的demo工程：
+首先，导入资料提供的demo工程：
 
 ![image-20210718155328927](assets/image-20210718155328927.png)
 
@@ -770,7 +770,7 @@ public void testTTLMsg() {
 
 ### 2.3.1.安装DelayExchange插件
 
-参考课前资料：
+参考资料：
 
 ![image-20210718193409812](assets/image-20210718193409812.png)
 
@@ -949,7 +949,7 @@ RabbitMQ的是基于Erlang语言编写，而Erlang又是一个面向并发的语
 
 ### 4.2.2.部署
 
-参考课前资料：《RabbitMQ部署指南.md》
+参考资料：《RabbitMQ部署指南.md》
 
 
 
@@ -979,7 +979,7 @@ RabbitMQ的是基于Erlang语言编写，而Erlang又是一个面向并发的语
 
 ### 4.3.2.部署
 
-参考课前资料：《RabbitMQ部署指南.md》
+参考资料：《RabbitMQ部署指南.md》
 
 
 
@@ -999,7 +999,7 @@ RabbitMQ的是基于Erlang语言编写，而Erlang又是一个面向并发的语
 
 ### 4.4.2.部署
 
-参考课前资料：《RabbitMQ部署指南.md》
+参考资料：《RabbitMQ部署指南.md》
 
 
 

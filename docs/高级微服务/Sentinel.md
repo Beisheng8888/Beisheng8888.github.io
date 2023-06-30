@@ -155,7 +155,7 @@ Sentinel 具有以下特征:
 
 sentinel官方提供了UI控制台，方便我们对系统做限流设置。大家可以在[GitHub](https://github.com/alibaba/Sentinel/releases)下载。
 
-课前资料也提供了下载好的jar包：
+资料也提供了下载好的jar包：
 
 ![image-20210715174252531](assets/image-20210715174252531.png)
 
@@ -314,13 +314,13 @@ spring:
 
 2）利用jmeter测试
 
-如果没有用过jmeter，可以参考课前资料提供的文档《Jmeter快速入门.md》
+如果没有用过jmeter，可以参考资料提供的文档《Jmeter快速入门.md》
 
-课前资料提供了编写好的Jmeter测试样例：
+资料提供了编写好的Jmeter测试样例：
 
 ![image-20210715200431615](assets/image-20210715200431615.png)
 
-打开jmeter，导入课前资料提供的测试样例：
+打开jmeter，导入资料提供的测试样例：
 
 ![image-20210715200537171](assets/image-20210715200537171.png)
 

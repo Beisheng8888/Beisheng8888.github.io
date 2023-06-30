@@ -89,7 +89,7 @@ SpringCloud集成了各种微服务功能组件，并基于SpringBoot实现了�
 
 ![image-20210713205003790](assets/image-20210713205003790.png)
 
-我们课堂学习的版本是 Hoxton.SR10，因此对应的SpringBoot版本是2.3.x版本。
+我们学习的版本是 Hoxton.SR10，因此对应的SpringBoot版本是2.3.x版本。
 
 
 
@@ -129,7 +129,7 @@ SpringCloud集成了各种微服务功能组件，并基于SpringBoot实现了�
 
 ## 2.2.服务拆分示例
 
-以课前资料中的微服务cloud-demo为例，其结构如下：
+以资料中的微服务cloud-demo为例，其结构如下：
 
 ![image-20210713211009593](assets/image-20210713211009593.png)
 
@@ -148,7 +148,7 @@ cloud-demo：父工程，管理依赖
 
 ### 2.2.1.导入Sql语句
 
-首先，将课前资料提供的`cloud-order.sql`和`cloud-user.sql`导入到mysql中：
+首先，将资料提供的`cloud-order.sql`和`cloud-user.sql`导入到mysql中：
 
 ![image-20210713211417049](assets/image-20210713211417049.png)
 
@@ -170,7 +170,7 @@ cloud-order表中持有cloud-user表中的id字段。
 
 ### 2.2.2.导入demo工程
 
-用IDEA导入课前资料提供的Demo：
+用IDEA导入资料提供的Demo：
 
 ![image-20210713211814094](assets/image-20210713211814094.png)
 
@@ -793,7 +793,7 @@ ribbon:
 
 
 
-安装方式可以参考课前资料《Nacos安装指南.md》
+安装方式可以参考资料《Nacos安装指南.md》
 
 
 

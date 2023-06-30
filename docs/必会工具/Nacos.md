@@ -20,7 +20,7 @@ GitHub的Release下载页：https://github.com/alibaba/nacos/releases
 
 
 
-本课程采用1.4.1.版本的Nacos，课前资料已经准备了安装包：
+本采用1.4.1.版本的Nacos，资料已经准备了安装包：
 
 ![image-20210402161130261](assets/image-20210402161130261.png)
 
@@ -139,7 +139,7 @@ source /etc/profile
 
 ![image-20210402161102887](assets/image-20210402161102887.png)
 
-也可以直接使用课前资料中的tar.gz：
+也可以直接使用资料中的tar.gz：
 
 ![image-20210402161130261](assets/image-20210402161130261.png)
 

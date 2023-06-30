@@ -251,7 +251,7 @@ DockerHub：
 
 ## 1.4.安装Docker
 
-企业部署一般都是采用Linux操作系统，而其中又数CentOS发行版占比最多，因此我们在CentOS下安装Docker。参考课前资料中的文档：
+企业部署一般都是采用Linux操作系统，而其中又数CentOS发行版占比最多，因此我们在CentOS下安装Docker。参考资料中的文档：
 
 ![image-20210731155002425](assets/image-20210731155002425.png)
 
@@ -741,11 +741,11 @@ vi index.html
 
 实现思路如下：
 
-1）在将课前资料中的mysql.tar文件上传到虚拟机，通过load命令加载为镜像
+1）在将资料中的mysql.tar文件上传到虚拟机，通过load命令加载为镜像
 
 2）创建目录/tmp/mysql/data
 
-3）创建目录/tmp/mysql/conf，将课前资料提供的hmy.cnf文件上传到/tmp/mysql/conf
+3）创建目录/tmp/mysql/conf，将资料提供的hmy.cnf文件上传到/tmp/mysql/conf
 
 4）去DockerHub查阅资料，创建并运行MySQL容器，要求：
 
@@ -838,15 +838,15 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 
   ![image-20210801101207444](assets/image-20210801101207444.png)
 
-- 步骤2：拷贝课前资料中的docker-demo.jar文件到docker-demo这个目录
+- 步骤2：拷贝资料中的docker-demo.jar文件到docker-demo这个目录
 
   ![image-20210801101314816](assets/image-20210801101314816.png)
 
-- 步骤3：拷贝课前资料中的jdk8.tar.gz文件到docker-demo这个目录
+- 步骤3：拷贝资料中的jdk8.tar.gz文件到docker-demo这个目录
 
   ![image-20210801101410200](assets/image-20210801101410200.png)
 
-- 步骤4：拷贝课前资料提供的Dockerfile到docker-demo这个目录
+- 步骤4：拷贝资料提供的Dockerfile到docker-demo这个目录
 
   ![image-20210801101455590](assets/image-20210801101455590.png)
 
@@ -909,7 +909,7 @@ docker run的命令中通过 -v 参数挂载文件或目录到容器中：
 
 - ① 新建一个空的目录，然后在目录中新建一个文件，命名为Dockerfile
 
-- ② 拷贝课前资料提供的docker-demo.jar到这个目录中
+- ② 拷贝资料提供的docker-demo.jar到这个目录中
 
 - ③ 编写Dockerfile文件：
 
@@ -994,7 +994,7 @@ DockerCompose的详细语法参考官网：https://docs.docker.com/compose/compo
 
 ## 4.2.安装DockerCompose
 
-参考课前资料
+参考资料
 
 
 
@@ -1006,7 +1006,7 @@ DockerCompose的详细语法参考官网：https://docs.docker.com/compose/compo
 
 **实现思路**：
 
-① 查看课前资料提供的cloud-demo文件夹，里面已经编写好了docker-compose文件
+① 查看资料提供的cloud-demo文件夹，里面已经编写好了docker-compose文件
 
 ② 修改自己的cloud-demo项目，将数据库、nacos地址都命名为docker-compose中的服务名
 
@@ -1020,7 +1020,7 @@ DockerCompose的详细语法参考官网：https://docs.docker.com/compose/compo
 
 ### 4.3.1.compose文件
 
-查看课前资料提供的cloud-demo文件夹，里面已经编写好了docker-compose文件，而且每个微服务都准备了一个独立的目录：
+查看资料提供的cloud-demo文件夹，里面已经编写好了docker-compose文件，而且每个微服务都准备了一个独立的目录：
 
 ![image-20210731181341330](assets/image-20210731181341330.png)
 
@@ -1178,7 +1178,7 @@ docker-compose up -d
 
 ## 5.1.搭建私有镜像仓库
 
-参考课前资料《CentOS7安装Docker.md》
+参考资料《CentOS7安装Docker.md》
 
 
 

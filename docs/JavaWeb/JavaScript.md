@@ -28,7 +28,7 @@ JavaScript 是用来控制网页行为的，它能使网页可交互；那么它
 
 JavaScript 和 Java 是完全不同的语言，不论是概念还是设计，只是名字比较像而已。但是==基础语法类似==，所以我们有java的学习经验，再学习JavaScript 语言就相对比较容易些。
 
-JavaScript（简称：JS） 在 1995 年由 Brendan Eich 发明，并于 1997 年成为一部 ECMA 标准。ECMA 规定了一套标准 就叫 `ECMAScript` ，所有的客户端校验语言必须遵守这个标准，当然 JavaScript 也遵守了这个标准。ECMAScript 6 (简称ES6) 是最新的 JavaScript 版本（发布于 2015 年)，我们的课程就是基于最新的 `ES6` 进行讲解。
+JavaScript（简称：JS） 在 1995 年由 Brendan Eich 发明，并于 1997 年成为一部 ECMA 标准。ECMA 规定了一套标准 就叫 `ECMAScript` ，所有的客户端校验语言必须遵守这个标准，当然 JavaScript 也遵守了这个标准。ECMAScript 6 (简称ES6) 是最新的 JavaScript 版本（发布于 2015 年)，我们的就是基于最新的 `ES6` 进行讲解。
 
 
 
@@ -779,7 +779,7 @@ Array 对象同样也提供了很多方法，如下图是官方文档截取的
 
 ![img](assets/image-20210815190601340.png )
 
-而我们在课堂中只演示 `push` 函数和 `splice` 函数。
+而我们在中只演示 `push` 函数和 `splice` 函数。
 
 * push 函数：给数组添加元素，也就是在数组的末尾添加元素
 
@@ -931,7 +931,7 @@ BOM：Browser Object Model 浏览器对象模型。也就是 JavaScript 将浏�
 
 ![img](assets/image-20210815194911914.png )
 
-BOM 中的 `Navigator` 对象和 `Screen` 对象基本不会使用，所以我们的课堂只对 `Window`、`History`、`Location` 对象进行讲解。
+BOM 中的 `Navigator` 对象和 `Screen` 对象基本不会使用，所以我们的只对 `Window`、`History`、`Location` 对象进行讲解。
 
 ### 5.1  Window对象
 

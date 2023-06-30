@@ -80,7 +80,7 @@ SpringMVC框架有什么优点？
 
 **注意事项：**
 
-1. 课程版本基于Spring主版本5.2.10.RELEASE制作
+1. 版本基于Spring主版本5.2.10.RELEASE制作
 2. 导入spring-webmvc坐标自动依赖spring相关坐标
 
 ##### 【第四步】定义处理请求的功能类（UserController）
