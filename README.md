@@ -57,6 +57,8 @@
 
 [📘中文文档](https://beisheng8888.github.io/#/)
 
+[📘中文文档V2.0](https://beisheng8888.github.io/blog/)
+
 [📘中文备用文档](https://beisheng8888.github.io/#/)
 
 [📙参考API](https://beisheng8888.github.io/#/)

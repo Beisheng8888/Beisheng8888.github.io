@@ -127,9 +127,9 @@ Linux部署
 
 ## 📌 联系我
 
-<div align="center">
-<img src="./assets/微信二维码.jpg" height="200"></a>
-</div>
+[//]: # (<div align="center">)
+[//]: # (<img src="./assets/微信二维码.jpg" height="200"></a>)
+[//]: # (</div>)
 
 ## 🌈 主题选择
 

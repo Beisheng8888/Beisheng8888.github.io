@@ -40,5 +40,5 @@
 
 [GitHub](https://github.com/Beisheng8888/Beisheng8888.github.io)
 [开始](#🎁readme)
-
+[V2.0](https://beisheng8888.github.io/blog/)
 
